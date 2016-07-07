@@ -1,9 +1,9 @@
 {
   "name": "responsive-iframes",
-  "description": "> Responsive iframes for embedded content",
-  "main": "index.js",
+  "description": "Responsive iframes for embedded content",
+  "main": "index.html",
   "authors": [
-    "Jeff Wainwright <jjwainwright2@gmail.com>"
+    "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],
   "license": "ISC",
   "homepage": "https://github.com/yowainwright/responsive-iframes",

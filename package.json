@@ -1,10 +1,10 @@
 {
   "name": "responsive-iframes",
   "version": "1.0.0",
-  "description": "> Responsive iframes for embedded content",
-  "main": "index.js",
+  "description": "Responsive iframes for embedded content",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "responsive iframes"
   },
   "repository": {
     "type": "git",
