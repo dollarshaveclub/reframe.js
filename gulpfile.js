@@ -16,7 +16,7 @@ gulp.task('styles', function() {
   gulp
     .src('src/styles/_responsive_iframe.scss')
     .pipe(rename({basename: 'responsive-iframe', extname: '.css'}))
-    .pipe(gulp.dest('src/styles/'));
+    .pipe(gulp.dest('src/styles/css/'));
 
 });
 
