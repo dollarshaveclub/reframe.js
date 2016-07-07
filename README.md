@@ -1,2 +1,3 @@
-# responsive-iframes
-Responsive iframes for your embedded content
+# Responsive Iframes
+> Responsive iframes for embedded content
+

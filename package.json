@@ -1,0 +1,25 @@
+{
+  "name": "responsive-iframes",
+  "version": "1.0.0",
+  "description": "> Responsive iframes for embedded content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/responsive-iframes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yowainwright/responsive-iframes/issues"
+  },
+  "homepage": "https://github.com/yowainwright/responsive-iframes#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6"
+  }
+}

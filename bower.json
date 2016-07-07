@@ -1,0 +1,17 @@
+{
+  "name": "responsive-iframes",
+  "description": "> Responsive iframes for embedded content",
+  "main": "index.js",
+  "authors": [
+    "Jeff Wainwright <jjwainwright2@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/yowainwright/responsive-iframes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
