@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Responsive Iframes</title>
-	<link rel="stylesheet" media="all" href="responsive-iframe.css">
+	<link rel="stylesheet" media="all" href="index.css">
 </head>
 <body>
 	<article>
@@ -13,15 +13,28 @@
 			<h1>
 				Responsive Iframes
 			</h1>
+			<p>This page is a demo of a <a href="https://github.com/yowainwright/responsive-iframes">Responsive Iframes</a> - a very simple lightweight plugin that makes iframes responsive.</p>
 		</header>
 		<div>
-			<p>This is an <pre>iframe</pre>.</p>
+			<p>Responsive Iframes makes all iframes selected responsive. You can add a second arguement to the plugin to not select that iframe.</p>
+			<figure>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe>
+			<figcaption>This is an <code>iframe</code> that contains a video.</figcaption>
+			</figure>
+		</div>
+		<div>
+			<figure>
+			<iframe id="do-not-select" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe>
+			<figcaption>This is an <code>iframe</code> that contains a video. It will <strong>not</strong> be responsive.</figcaption>
+			</figure>
 		</div>
 		<footer>
 			<p>Thanks</p>
 		</footer>
 	</article>
 	<script src="src/responsive-iframe.js"></script>
+	<script>
+		ResponsiveIframe('iframe', '#do-not-select');
+	</script>
 	</body>
 </html>
