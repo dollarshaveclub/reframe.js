@@ -28,7 +28,7 @@ bower install responsive-iframes --save-dev
 
 ```
  
-Or just download it here.
+Or just download it here ^ (top right corner).
 
 ## Examples
 
