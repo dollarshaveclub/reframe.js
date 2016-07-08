@@ -12,7 +12,7 @@
   ) {
   
     var exclusionSelector = typeof( excludedIframe ) !== 'undefined' ? excludedIframe : null;
-    if ( typeof( excludedIframe ) !== 'undefined' ) {
+    if ( typeof( excludedIframe ) !== 'undefined' || ( ! document.querySelectorAll( excludedIframe ).length ) ) {
       responsiveIframe = document.querySelectorAll(responsiveIframe+':not('+excludedIframe+')');
     } else {
       responsiveIframe = document.querySelectorAll(responsiveIframe);
