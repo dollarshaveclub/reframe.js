@@ -2,7 +2,7 @@
 
 > Responsive iframes for embedded content - like videos & ish like that.
 
-_Responsive Iframes_ is a lil' javascripts plugin that makes iframes responsive. 
+_Responsive Iframes_ is a lil' javascript plugin that makes iframes responsive. 
 
 ```javascript
 
@@ -18,6 +18,20 @@ ResponsiveIframe('iframe', '#do-not-select-this-one-thanks');
 
 ```
 
-[Here's a quick demo](http://codepen.io/yowainwright/pen/oLZazw/)
+## Setup
+
+If you use bower
+
+```terminal
+
+bower install responsive-iframes --save-dev
+
+```
+ 
+Or just download it here.
+
+## Examples
+
+[Here ya' go](http://codepen.io/yowainwright/pen/oLZazw/)
 
 
