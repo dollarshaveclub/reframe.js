@@ -10,14 +10,14 @@
     responsiveIframe, 
     excludedIframe
   ) {
-  
-    var exclusionSelector = typeof( excludedIframe ) !== 'undefined' ? excludedIframe : null;
-    if ( typeof( excludedIframe ) !== 'undefined' || ( ! document.querySelectorAll( excludedIframe ).length ) ) {
-      responsiveIframe = document.querySelectorAll(responsiveIframe+':not('+excludedIframe+')');
-    } else {
-      responsiveIframe = document.querySelectorAll(responsiveIframe);
-    }
+      
+    responsiveIframe = document.querySelectorAll(responsiveIframe);
     for (i = 0; i < responsiveIframe.length; ++i) {
+
+      if ( typeof(excludedIframe) !== 'undefined') {
+        if (responsiveIframe[i] === document.querySelector(excludedIframe) ) return;
+      }
+
       var wrapper = document.createElement("div"),
           divAdded = false;
       wrapper.className += 'js-responsive-iframe';
