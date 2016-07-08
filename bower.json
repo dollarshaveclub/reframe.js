@@ -2,6 +2,7 @@
   "name": "responsive-iframes",
   "description": "Responsive iframes for embedded content",
   "main": "index.html",
+  "version": "0.0.1",
   "authors": [
     "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],

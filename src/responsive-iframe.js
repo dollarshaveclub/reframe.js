@@ -1,7 +1,6 @@
 (function( window, factory ) {
 
   ResponsiveIframe = window.ResponsiveIframe || {};
-  if ( 'undefined' === typeof ResponsiveIframe ) return console.log('Unmet Dependencies');
   factory( ResponsiveIframe );
 
 })( this, function( utils ) {
