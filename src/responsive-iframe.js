@@ -9,27 +9,24 @@
     responsiveIframe, 
     excludedIframe
   ) {
-      
     responsiveIframe = document.querySelectorAll(responsiveIframe);
+    if (! responsiveIframe ) return;
     for (i = 0; i < responsiveIframe.length; ++i) {
-
       if ( typeof(excludedIframe) !== 'undefined') {
         if (responsiveIframe[i] === document.querySelector(excludedIframe) ) return;
       }
 
-       var iframeHeight = responsiveIframe[i].offsetHeight,
+      var iframeHeight = responsiveIframe[i].offsetHeight,
           iframeWidth = responsiveIframe[i].offsetWidth,
           wrapper = document.createElement("div"),
-          divAdded = false;
-
+          divAdded = false; 
       if ( iframeHeight === iframeWidth ) {
         wrapper.style.paddingTop = '100%';
       } else if ( iframeHeight > iframeWidth ) {
-        wrapper.style.paddingTop = ( iframeWidth / iframeHeight * 100 ) + '%';
+        wrapper.style.paddingTop = (iframeWidth / iframeHeight * 100) + '%';
       } else {
-        wrapper.style.paddingTop = ( iframeHeight / iframeWidth * 100 ) + '%';
+        wrapper.style.paddingTop = (iframeHeight / iframeWidth * 100) + '%';
       }
-
       wrapper.className += 'js-responsive-iframe';
       responsiveIframe[i].removeAttribute('height');
       responsiveIframe[i].removeAttribute('width');
