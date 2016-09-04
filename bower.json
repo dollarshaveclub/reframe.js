@@ -1,21 +1,18 @@
 {
-  "name": "responsive-iframes",
-  "description": "Responsive iframes for embedded content",
+  "name": "reframe.js",
+  "description": "Reframe.js: responsive iframes for embedded content",
   "main": "index.html",
   "version": "0.0.1",
   "authors": [
     "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/yowainwright/responsive-iframes",
+  "homepage": "https://github.com/yowainwright/reframe.js",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-  ],
-  "devDependencies": {
-    "scss-utility-mixins": "*"
-  }
+  ]
 }

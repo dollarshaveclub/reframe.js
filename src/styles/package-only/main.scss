@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import "bower_components/scss-utility-mixins/src/mixins/mixins";
+@import "node_modules/sassimple/mixins/_sassimple.scss";
 
 @import "src/styles/package-only/variables";
 @import "src/styles/package-only/base";
 
-@import "src/styles/responsive_iframe.scss";
+@import "src/styles/reframe.scss";
 
 p,
 figure {

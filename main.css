@@ -1,0 +1,191 @@
+html {
+  box-sizing: border-box;
+}
+
+*,*::after,*::before {
+  box-sizing: inherit;
+}
+
+/**
+ * ~Some~ of the following styles are loosely pulled from Normalize CSS
+ * For reference: normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css
+*/
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 2;
+  -ms-text-size-adjust: 2;
+  text-size-adjust: 2;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: black;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+article,figcaption,figure,footer,header,main {
+  display: block;
+}
+
+video {
+  display: inline-block;
+}
+
+[hidden] {
+  display: none;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+code {
+  font-family: monospace, monospace;
+}
+
+select {
+  font: inherit;
+  margin: 0;
+}
+
+select {
+  overflow: visible;
+}
+
+select {
+  text-transform: none;
+}
+
+html [type="button"],[type="reset"],[type="submit"] {
+  -webkit-appearance: button;
+}
+
+[type="checkbox"],[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Reset some basic elements
+ */
+
+body,h1,h2,h3,h4,h5,h6,p,figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+
+h1,h2,h3,h4,h5,h6,p,figure {
+  margin-bottom: 0.5rem;
+}
+
+/**
+ * Images
+ */
+
+/**
+ * Figures
+ */
+
+/**
+ * Lists
+ */
+
+/**
+ * Headings
+ */
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+/**
+ * Links
+ */
+
+a {
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+}
+
+a:active,a:hover {
+  outline-width: 0;
+}
+
+/**
+ * Blockquotes
+ */
+
+/**
+ * Code formatting
+ */
+
+.js-responsive-iframe {
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.js-responsive-iframe iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+p,figure {
+  margin: 1rem 0;
+}
+
+figcaption {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+article {
+  margin: 1rem auto;
+  max-width: calc(100% - 4rem);
+}
+
+@media screen and (min-width: 768px) {
+  article {
+    max-width: 700px;
+  }
+}
+
+h1,footer p {
+  text-align: center;
+}
+
+h1,footer {
+  margin: 2rem auto;
+}

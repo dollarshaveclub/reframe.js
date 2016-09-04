@@ -1,25 +1,26 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var purifyCSS = require('gulp-purifycss');
-var cssnano = require('gulp-cssnano');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sassGlob = require('gulp-sass-glob');
+const rename = require('gulp-rename');
+const purifyCss = require('gulp-purifycss');
 
-gulp.task('styles', function() {
+gulp.task('styles', () => {
 
   gulp
-    .src('src/styles/package-only/index.scss')
+    .src('src/styles/package-only/main.scss')
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
+    .pipe(purifyCss(['index.html']))
     .pipe(gulp.dest(''));
+  gulp
+    .src('src/styles/_reframe.scss')
+    .pipe(rename({basename: 'reframe', extname: '.css'}))
+    .pipe(gulp.dest('dist/'));
 
   gulp
-    .src('src/styles/_responsive_iframe.scss')
-    .pipe(rename({basename: 'responsive-iframe', extname: '.css'}))
-    .pipe(gulp.dest('src/styles/css/'));
+    .src('src/styles/_reframe.scss')
+    .pipe(gulp.dest('dist/'));
 
 });
 
-gulp.task('default',function() {
-   gulp.watch('./src/styles/**/*.scss', ['styles']);
-});
+gulp.task('default', ['styles']);
