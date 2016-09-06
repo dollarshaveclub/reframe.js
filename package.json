@@ -36,10 +36,16 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
+    "qunit": "^0.9.1",
     "rollup": "^0.34.13",
     "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^4.1.0",
     "rollup-plugin-eslint": "^2.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
     "sassimple": "^1.2.2"
+  },
+  "dependencies": {
+    "debug": "^2.2.0"
   }
 }

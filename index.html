@@ -24,7 +24,7 @@
 		</div>
 		<div>
 			<figure>
-			<iframe id="do-not-select" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe>
+			<!-- <iframe id="do-not-select" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe> -->
 			<figcaption>This is an <code>iframe</code> that contains a video. It will <strong>not</strong> be responsive.</figcaption>
 			</figure>
 		</div>
@@ -32,9 +32,9 @@
 			<p>Thanks</p>
 		</footer>
 	</article>
-	<script src="src/responsive-iframe.js"></script>
+	<script src="dist/reframe.js"></script>
 	<script>
-		ResponsiveIframe('iframe', '#do-not-select');
+		new Reframe('iframe');
 	</script>
 	</body>
 </html>

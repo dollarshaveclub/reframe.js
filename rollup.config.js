@@ -1,22 +1,29 @@
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
   entry: 'src/reframe.js',
-  dest: 'dist/reframe.min.js',
+  dest: 'dist/reframe.js',
   format: 'iife',
   moduleName: 'Reframe',
   sourceMap: false, // removes the souremap at the bottom of the file
   plugins: [
-    babel({
-      exclude: 'node_modules/**',
+    resolve({
+      jsnext: true,
+      main: true,
+      browser: true,
     }),
+    commonjs(),
     eslint({
       exclude: [
-        'src/styles/**',
-        'dist/reframe.min.js'
+        'src/styles/**'
       ]
+    }),
+    babel({
+      exclude: 'node_modules/**',
     }),
   ],
 };
