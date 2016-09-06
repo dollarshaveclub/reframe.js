@@ -8,12 +8,19 @@ const cssNano = require('gulp-cssnano');
 gulp.task('styles', () => {
 
   gulp
-    .src('src/styles/_reframe.scss')
-    .pipe(rename({basename: 'reframe', extname: '.css'}))
+    .src('src/styles/_reframe_mixin.scss')
     .pipe(gulp.dest('dist/'));
 
   gulp
-    .src('src/styles/_reframe.scss')
+    .src('src/styles/reframe.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(rename({basename: '_reframe', extname: '.scss'}))
+    .pipe(gulp.dest('dist/'));
+
+  gulp
+    .src('src/styles/reframe.scss')
+    .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/'));
 
   return gulp

@@ -1,0 +1,12 @@
+@mixin reframe($el: iframe, $paddingTop: 56.25%){
+  padding-top: $paddingTop;
+  position: relative;
+  width: 100%;
+  #{$el} {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

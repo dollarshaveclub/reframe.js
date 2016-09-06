@@ -1,24 +1,18 @@
-var Reframe = (function () {
-'use strict';
-
-var classCallCheck = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global.reframe = factory());
+}(this, (function () { 'use strict';
 
 // Reframe.js
-// - runs for 1 iframe (does not assume multiple iframes)
+// - runs for 1 child element (does not assume multiple elements)
 // - does not deal with src, so it will repaint
-// - it's an element wrap with a fluid size `thinger`
-var Reframe = function Reframe(iframe) {
-  classCallCheck(this, Reframe);
-
-  this.frame = document.querySelector(iframe);
-  if (!this.frame) return;
+// - it JUST creates a fluid wrapper
+function Reframe(el) {
+  this.frame = document.querySelector(el);
+  if (!this.frame) return false;
   var frameHeight = this.frame.offsetHeight;
   var frameWidth = this.frame.offsetWidth;
-  console.log(this.frame, frameHeight, frameWidth);
   var wrapper = document.createElement('div');
   var divAdded = false;
   if (frameHeight === frameWidth) {
@@ -38,8 +32,14 @@ var Reframe = function Reframe(iframe) {
   }
   this.frame.parentNode.removeChild(this.frame);
   wrapper.appendChild(this.frame);
+
+  return this;
+}
+
+function reframe (el) {
+  return new Reframe(el);
 };
 
-return Reframe;
+return reframe;
 
-}());
+})));

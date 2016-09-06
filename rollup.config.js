@@ -7,8 +7,8 @@ import uglify from 'rollup-plugin-uglify';
 export default {
   entry: 'src/reframe.js',
   dest: 'dist/reframe.js',
-  format: 'iife',
-  moduleName: 'Reframe',
+  format: 'umd',
+  moduleName: 'reframe',
   sourceMap: false, // removes the souremap at the bottom of the file
   plugins: [
     resolve({
