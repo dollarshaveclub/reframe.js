@@ -2,12 +2,12 @@
   "name": "reframe.js",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "index.html",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/yowainwright/reframe.js",
+  "homepage": "https://github.com/dollarshaveclub/reframe.js",
   "ignore": [
     "**/.*",
     "node_modules",
