@@ -15,14 +15,12 @@ new Reframe('iframe');
 **Bower**
 ```terminal
 
-bower install responsive-iframes --save-dev
 
 ```
 
 **NPM**
 ```terminal
 
-npm install responsive-iframes --save-dev
 
 ```
 \* Or just download it here ^ (top right corner).
