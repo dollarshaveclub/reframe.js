@@ -1,12 +1,12 @@
-# Reframe
+# 🖼 Reframe.js
 
-> Reframe for embedded content - like videos & ish like that.
+> Reframe.js for embedded content - like videos & 'ish like that.
 
-_Reframe_ is a lil' javascript plugin that makes embedded content responsive. 
+🖼**Reframe.js** is a lil' javascript plugin that makes embedded content responsive. 
 
 ```javascript
 
-new Reframe('iframe');
+reframe('iframe');
 
 ```
 
@@ -14,18 +14,18 @@ new Reframe('iframe');
 
 **Bower**
 ```terminal
-
+npm install reframe.js --save-dev
 
 ```
 
 **NPM**
 ```terminal
-
+npm install reframe.js --save-dev
 
 ```
 \* Or just download it here ^ (top right corner).
 
 ## Examples
 
-
+https://codepen.io/yowainwright/pen/amzAEo/
 
