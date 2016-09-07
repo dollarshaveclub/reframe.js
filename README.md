@@ -1,9 +1,9 @@
-[![npm version 0.0.7](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
+[![npm version 0.0.9](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
 [![Bower version 0.0.3](https://badge.fury.io/bo/reframe.js.svg)](https://badge.fury.io/bo/reframe.js)
 
 ## 🖼 Reframe.js
 
-🖼 &nbsp;Reframe.js is a lil' javascript plugin that makes embedded content responsive.
+Reframe.js is a lil' javascript plugin that makes embedded content responsive.
 
 ## Setup
 
