@@ -1,4 +1,4 @@
-[![npm version 0.1.1](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
+[![npm version 0.1.2](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
 [![Bower version 0.0.3](https://badge.fury.io/bo/reframe.js.svg)](https://badge.fury.io/bo/reframe.js)
 
 ## 🖼 Reframe.js
@@ -19,7 +19,7 @@ bower install reframe.js --save-dev
 
 1. Include **reframe.js** into your `vendor` file or in a `<script>` tag.
 2. Add reframe `css/scss`  to your `css`.
-3. reframe the element you'd like to reframe. 
+3. `reframe` the element you'd like to re-frame. 
 
 ```javascript
 reframe(selector);
