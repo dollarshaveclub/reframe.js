@@ -3,8 +3,6 @@
 
 ## 🖼 Reframe.js
 
-> Reframe.js wraps a div around embed content & makes it responsive.
-
 🖼 &nbsp;Reframe.js is a lil' javascript plugin that makes embedded content responsive.
 
 ## Setup
