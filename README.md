@@ -1,4 +1,4 @@
-[![npm version 0.1.0](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
+[![npm version 0.1.1](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
 [![Bower version 0.0.3](https://badge.fury.io/bo/reframe.js.svg)](https://badge.fury.io/bo/reframe.js)
 
 ## 🖼 Reframe.js
@@ -12,7 +12,7 @@ npm install reframe.js --save-dev
 ```
 
 ```terminal
-npm install reframe.js --save-dev
+bower install reframe.js --save-dev
 ```
 
 ## Usage
