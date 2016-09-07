@@ -12,9 +12,9 @@ function Reframe(el) {
   if (frameHeight === frameWidth) {
     wrapper.style.paddingTop = '100%';
   } else if (frameHeight > frameWidth) {
-    wrapper.style.paddingTop = `${frameWidth / frameHeight * 100} + %`;
+    wrapper.style.paddingTop = `${frameWidth / frameHeight * 100}` + '%';
   } else {
-    wrapper.style.paddingTop = `${frameHeight / frameWidth * 100} + %`;
+    wrapper.style.paddingTop = `${frameHeight / frameWidth * 100}` + '%';
   }
   wrapper.className += 'js-reframe';
   this.frame.removeAttribute('height');
@@ -32,4 +32,4 @@ function Reframe(el) {
 
 export default function (el) {
   return new Reframe(el);
-};
+}

@@ -18,11 +18,11 @@ function Reframe(el) {
   if (frameHeight === frameWidth) {
     wrapper.style.paddingTop = '100%';
   } else if (frameHeight > frameWidth) {
-    wrapper.style.paddingTop = frameWidth / frameHeight * 100 + ' + %';
+    wrapper.style.paddingTop = '' + frameWidth / frameHeight * 100 + '%';
   } else {
-    wrapper.style.paddingTop = frameHeight / frameWidth * 100 + ' + %';
+    wrapper.style.paddingTop = '' + frameHeight / frameWidth * 100 + '%';
   }
-  wrapper.className += 'js-responsive-iframe';
+  wrapper.className += 'js-reframe';
   this.frame.removeAttribute('height');
   this.frame.removeAttribute('width');
   this.frame.removeAttribute('style');
@@ -38,7 +38,7 @@ function Reframe(el) {
 
 function reframe (el) {
   return new Reframe(el);
-};
+}
 
 return reframe;
 
