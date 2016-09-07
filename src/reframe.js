@@ -9,13 +9,13 @@ function Reframe(el) {
   const frameWidth = this.frame.offsetWidth;
   const wrapper = document.createElement('div');
   let divAdded = false;
-  if (frameHeight === frameWidth) {
-    wrapper.style.paddingTop = '100%';
-  } else if (frameHeight > frameWidth) {
-    wrapper.style.paddingTop = `${frameWidth / frameHeight * 100}` + '%';
-  } else {
-    wrapper.style.paddingTop = `${frameHeight / frameWidth * 100}` + '%';
+  let padding = 100;
+  if (frameHeight > frameWidth) {
+    padding = frameWidth / frameHeight * 100;
+  } else if (frameHeight < frameWidth) {
+    padding = frameHeight / frameWidth * 100;
   }
+  wrapper.style.paddingTop = `${padding}` + '%';
   wrapper.className += 'js-reframe';
   this.frame.removeAttribute('height');
   this.frame.removeAttribute('width');

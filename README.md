@@ -3,9 +3,9 @@
 
 ## 🖼 Reframe.js
 
-Reframe.js is a lil' javascript plugin that makes embedded content responsive.
+Reframe.js is a javascript plugin that makes embedded content responsive.
 
-## Setup
+### Setup
 
 ```terminal
 npm install reframe.js --save-dev
@@ -15,19 +15,51 @@ npm install reframe.js --save-dev
 bower install reframe.js --save-dev
 ```
 
-## Usage
+### Run
 
 1. Include **reframe.js** into your `vendor` file or in a `<script>` tag.
 2. Add reframe `css/scss`  to your `css`.
 3. `reframe` the element you'd like to re-frame. 
 
 ```javascript
+reframe(selector);🔥
+```
+
+### Examples
+
+**Basic**
+```javascript
 reframe(selector);
 ```
 
+**Multiple reframes**
 ```javascript
-reframe('iframe');
+const frames = document.querySelectorAll('iframe');
+
+for (let frame of frames) {
+  reframe(frame);
+}
 ```
 
-💡 &nbsp;Here's a full [example](https://codepen.io/yowainwright/pen/amzAEo/)! 
+**But not this one**
+```javascript
+const frames = document.querySelectorAll('iframe');
+
+for (let frame of frames) {
+  if (! document.querySelector('iframe[src*="this-thing"]')) {
+    frame.setAttribute('data-reframe', true);
+  }
+  reframe('[data-reframe=true]');
+}
+```
+
+### How?
+
+**Reframe.js** removes a specified element `style attributes` & then wraps that element in responsive `div` that is a perfect ratio of the original div's size. This simple plugin is great for **embedded content** like `iframes`.
+
+### Why?
+
+**Reframe.js** is inspired by [FitVids](https://github.com/davatron5000/FitVids.js) & does what FitVids does but without the need for `jQuery`. This makes the plugin highly valuable when including it in a module that has to be very small & with minimal dependencies. 
+
+This plugin is small - `~1kb` unminified & is meant to do 1 thing - _wrap elements that aren't responsive & make them responsive_. 💪
 
