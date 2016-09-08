@@ -3,30 +3,31 @@
 // - does not deal with src, so it will repaint
 // - it JUST creates a fluid wrapper
 function Reframe(el) {
-  this.frame = document.querySelector(el);
-  if (! this.frame) return false;
-  const frameHeight = this.frame.offsetHeight;
-  const frameWidth = this.frame.offsetWidth;
-  const wrapper = document.createElement('div');
-  let divAdded = false;
-  let padding = 100;
-  if (frameHeight > frameWidth) {
-    padding = frameWidth / frameHeight * 100;
-  } else if (frameHeight < frameWidth) {
-    padding = frameHeight / frameWidth * 100;
+  const frames = document.querySelectorAll(el);
+  if (frames.length <= 0) return false;
+  for (const frame of frames) {
+    const frameHeight = frame.offsetHeight;
+    const frameWidth = frame.offsetWidth;
+    const wrapper = document.createElement('div');
+    let divAdded = false;
+    let padding = 100;
+    if (frameHeight > frameWidth) {
+      padding = frameWidth / frameHeight * 100;
+    } else if (frameHeight < frameWidth) {
+      padding = frameHeight / frameWidth * 100;
+    }
+    wrapper.style.paddingTop = `${padding}` + '%';
+    wrapper.className += 'js-reframe';
+    frame.removeAttribute('height');
+    frame.removeAttribute('width');
+    frame.removeAttribute('style');
+    if (! divAdded) {
+      frame.parentNode.insertBefore(wrapper, frame);
+      divAdded = true;
+    }
+    frame.parentNode.removeChild(frame);
+    wrapper.appendChild(frame);
   }
-  wrapper.style.paddingTop = `${padding}` + '%';
-  wrapper.className += 'js-reframe';
-  this.frame.removeAttribute('height');
-  this.frame.removeAttribute('width');
-  this.frame.removeAttribute('style');
-  if (! divAdded) {
-    this.frame.parentNode.insertBefore(wrapper, this.frame);
-    divAdded = true;
-  }
-  this.frame.parentNode.removeChild(this.frame);
-  wrapper.appendChild(this.frame);
-
   return this;
 }
 

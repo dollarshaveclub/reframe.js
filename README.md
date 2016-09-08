@@ -1,4 +1,4 @@
-[![npm version 0.1.2](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
+[![npm version 0.1.5](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
 [![Bower version 0.0.3](https://badge.fury.io/bo/reframe.js.svg)](https://badge.fury.io/bo/reframe.js)
 
 ## 🖼 Reframe.js
@@ -10,7 +10,6 @@ Reframe.js is a javascript plugin that makes embedded content responsive.
 ```terminal
 npm install reframe.js --save-dev
 ```
-
 ```terminal
 bower install reframe.js --save-dev
 ```
@@ -32,25 +31,14 @@ reframe(selector);🔥
 reframe(selector);
 ```
 
-**Multiple reframes**
+**Or Multiples**
 ```javascript
-const frames = document.querySelectorAll('iframe');
-
-for (let frame of frames) {
-  reframe(frame);
-}
+reframe(selector);
 ```
 
 **But not this one**
 ```javascript
-const frames = document.querySelectorAll('iframe');
-
-for (let frame of frames) {
-  if (! document.querySelector('iframe[src*="this-thing"]')) {
-    frame.setAttribute('data-reframe', true);
-  }
-  reframe('[data-reframe=true]');
-}
+reframe(selector:not([not this selector]));
 ```
 
 ### How?
