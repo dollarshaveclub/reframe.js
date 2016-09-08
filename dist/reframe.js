@@ -5,62 +5,37 @@
 }(this, (function () { 'use strict';
 
 // Reframe.js
-// - runs for 1 child element (does not assume multiple elements)
+// - runs for all selector unless otherwise specified
 // - does not deal with src, so it will repaint
 // - it JUST creates a fluid wrapper
-function Reframe(el) {
-  var frames = document.querySelectorAll(el);
+function Reframe(selector) {
+  var frames = document.querySelectorAll(selector);
   if (frames.length <= 0) return false;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = frames[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var frame = _step.value;
-
-      var frameHeight = frame.offsetHeight;
-      var frameWidth = frame.offsetWidth;
-      var wrapper = document.createElement('div');
-      var divAdded = false;
-      var padding = 100;
-      if (frameHeight > frameWidth) {
-        padding = frameWidth / frameHeight * 100;
-      } else if (frameHeight < frameWidth) {
-        padding = frameHeight / frameWidth * 100;
-      }
-      wrapper.style.paddingTop = '' + padding + '%';
-      wrapper.className += 'js-reframe';
-      frame.removeAttribute('height');
-      frame.removeAttribute('width');
-      frame.removeAttribute('style');
-      if (!divAdded) {
-        frame.parentNode.insertBefore(wrapper, frame);
-        divAdded = true;
-      }
-      frame.parentNode.removeChild(frame);
-      wrapper.appendChild(frame);
+  for (var i = 0; i < frames.length; i++) {
+    var frame = frames[i];
+    var height = frame.offsetHeight;
+    var width = frame.offsetWidth;
+    var div = document.createElement('div');
+    var padding = 100;
+    if (height !== width) {
+      padding = height / width * 100;
     }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
+    div.style.paddingTop = padding + '%';
+    frame.removeAttribute('height');
+    frame.removeAttribute('width');
+    frame.removeAttribute('style');
+    if (!div.classList.contains('js-reframe')) {
+      div.className += 'js-reframe';
+      frame.parentNode.insertBefore(div, frame);
     }
+    frame.parentNode.removeChild(frame);
+    div.appendChild(frame);
   }
-
   return this;
 }
 
-function reframe (el) {
-  return new Reframe(el);
+function reframe (selector) {
+  return new Reframe(selector);
 }
 
 return reframe;

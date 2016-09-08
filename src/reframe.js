@@ -1,36 +1,33 @@
 // Reframe.js
-// - runs for 1 child element (does not assume multiple elements)
+// - runs for all selector unless otherwise specified
 // - does not deal with src, so it will repaint
 // - it JUST creates a fluid wrapper
-function Reframe(el) {
-  const frames = document.querySelectorAll(el);
+function Reframe(selector) {
+  const frames = document.querySelectorAll(selector);
   if (frames.length <= 0) return false;
-  for (const frame of frames) {
-    const frameHeight = frame.offsetHeight;
-    const frameWidth = frame.offsetWidth;
-    const wrapper = document.createElement('div');
-    let divAdded = false;
+  for (let i = 0; i < frames.length; i++) {
+    const frame = frames[i];
+    const height = frame.offsetHeight;
+    const width = frame.offsetWidth;
+    const div = document.createElement('div');
     let padding = 100;
-    if (frameHeight > frameWidth) {
-      padding = frameWidth / frameHeight * 100;
-    } else if (frameHeight < frameWidth) {
-      padding = frameHeight / frameWidth * 100;
+    if (height !== width) {
+      padding = height / width * 100;
     }
-    wrapper.style.paddingTop = `${padding}` + '%';
-    wrapper.className += 'js-reframe';
+    div.style.paddingTop = `${padding}%`;
     frame.removeAttribute('height');
     frame.removeAttribute('width');
     frame.removeAttribute('style');
-    if (! divAdded) {
-      frame.parentNode.insertBefore(wrapper, frame);
-      divAdded = true;
+    if (!div.classList.contains('js-reframe')) {
+      div.className += 'js-reframe';
+      frame.parentNode.insertBefore(div, frame);
     }
     frame.parentNode.removeChild(frame);
-    wrapper.appendChild(frame);
+    div.appendChild(frame);
   }
   return this;
 }
 
-export default function (el) {
-  return new Reframe(el);
+export default function (selector) {
+  return new Reframe(selector);
 }

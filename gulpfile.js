@@ -4,6 +4,7 @@ const sassGlob = require('gulp-sass-glob');
 const rename = require('gulp-rename');
 const purifyCss = require('gulp-purifycss');
 const cssNano = require('gulp-cssnano');
+const qunit = require('node-qunit-phantomjs');
 
 gulp.task('styles', () => {
   gulp
@@ -30,4 +31,8 @@ gulp.task('styles', () => {
 
 });
 
-gulp.task('default', ['styles']);
+gulp.task('test', function() {
+    qunit('src/tests/index.html');
+});
+
+gulp.task('default', ['styles', 'test']);

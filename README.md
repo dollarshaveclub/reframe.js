@@ -28,17 +28,17 @@ reframe(selector);🔥
 
 **Basic**
 ```javascript
-reframe(selector);
+reframe('selector');
 ```
 
 **Or Multiples**
 ```javascript
-reframe(selector);
+reframe('selector');
 ```
 
 **But not this one**
 ```javascript
-reframe(selector:not([not this selector]));
+reframe('selector:not([not this selector])');
 ```
 
 ### How?

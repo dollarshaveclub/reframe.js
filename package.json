@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "index.html",
   "scripts": {
@@ -38,6 +38,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
     "jquery": "^3.1.0",
+    "node-qunit-phantomjs": "^1.4.0",
     "qunit": "^0.9.1",
     "rollup": "^0.34.13",
     "rollup-plugin-babel": "^2.6.1",
