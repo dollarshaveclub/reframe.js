@@ -5,7 +5,7 @@
 
 ## 🖼 Reframe.js
 
-Reframe.js is a javascript plugin that makes embedded content responsive.
+Reframe.js is a javascript plugin that makes unresponsive elements responsive.
 
 ### Setup
 
@@ -45,11 +45,11 @@ reframe('selector:not([not this selector])');
 
 ### How?
 
-**Reframe.js** removes a specified element `style attributes` & then wraps that element in responsive `div` that is a perfect ratio of the original div's size. This simple plugin is great for **embedded content** like `iframes`.
+**Reframe.js** removes a specified element's `height & width attributes` & then wraps that element in responsive `div` that is a perfect ratio of the original element's size. This plugin is meant for **embedded content** like `iframes` or `videos`.
 
 ### Why?
 
-**Reframe.js** is inspired by [FitVids](https://github.com/davatron5000/FitVids.js) & does what FitVids does but without the need for `jQuery`. This makes the plugin highly valuable when including it in a module that has to be very small & with minimal dependencies. 
+**Reframe.js** is inspired by [FitVids](https://github.com/davatron5000/FitVids.js) & does what FitVids does but without the need for `jQuery`. This makes the plugin highly valuable when including it in a module that has to be very small & with minimal dependencies. Here's a basic [codepen example](http://codepen.io/yowainwright/pen/amzAEo).
 
 This plugin is small - `~1kb` unminified & is meant to do 1 thing - _wrap elements that aren't responsive & make them responsive_. 💪
 
