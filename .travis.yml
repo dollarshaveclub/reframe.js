@@ -1,4 +1,14 @@
+before_install:
+  - npm install -g npm
+  - npm install -g bower
+  - bower --version
+  - phantomjs --version
+
+install:
+  - npm install
+  - bower install
 before_script:
   - npm install -g gulp
   - npm install node-qunit-phantomjs
+
 script: gulp
