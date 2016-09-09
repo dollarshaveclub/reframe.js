@@ -1,5 +1,7 @@
-[![npm version 0.1.5](https://badge.fury.io/js/reframe.js.svg)](https://badge.fury.io/js/reframe.js)
-[![Bower version 0.0.3](https://badge.fury.io/bo/reframe.js.svg)](https://badge.fury.io/bo/reframe.js)
+[![npm version 0.1.7](https://badge.fury.io/js/reframe.js.svg)](https://www.npmjs.com/package/reframe.js)
+[![Bower version 0.0.5](https://badge.fury.io/bo/reframe.js.svg)](https://github.com/dollarshaveclub/reframe.js)
+[![Build Status](https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master)](https://travis-ci.org/dollarshaveclub/reframe.js)
+[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/home?status=Reframe+unresponsive+elements+responsively.+%F0%9F%92%AAhttps%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Freframe.js+%40DSCEngineering+%40yowainwright+%23JavaScript)
 
 ## 🖼 Reframe.js
 
