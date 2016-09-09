@@ -21,7 +21,7 @@ bower install reframe.js --save-dev
 3. `reframe` the element you'd like to re-frame. 
 
 ```javascript
-reframe(selector);🔥
+reframe('selector');🔥
 ```
 
 ### Examples

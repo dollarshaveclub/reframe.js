@@ -2,7 +2,7 @@
   "name": "reframe.js",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "index.html",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "authors": [
     "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],

@@ -15,9 +15,7 @@ function Reframe(selector) {
       padding = height / width * 100;
     }
     div.style.paddingTop = `${padding}%`;
-    frame.removeAttribute('height');
-    frame.removeAttribute('width');
-    frame.removeAttribute('style');
+    frame.height = frame.width = '';
     if (!div.classList.contains('js-reframe')) {
       div.className += 'js-reframe';
       frame.parentNode.insertBefore(div, frame);
