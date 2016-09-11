@@ -14,7 +14,7 @@
     if (height !== width) {
       padding = height / width * 100;
     }
-    var div = '<div class="js-reframe" style="padding-top: ' + padding + '"></div>';
+    var div = '<div class="js-reframe" style="padding-top: ' + padding + '%"></div>';
     return $this.wrap(div);
   };
 })(jQuery);
