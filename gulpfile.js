@@ -5,6 +5,14 @@ const rename = require('gulp-rename');
 const purifyCss = require('gulp-purifycss');
 const cssNano = require('gulp-cssnano');
 const qunit = require('node-qunit-phantomjs');
+const babel = require('gulp-babel');
+
+gulp.task('scripts', () => {
+  return gulp
+    .src('src/jquery.reframe.js')
+    .pipe(babel({presets: ['es2015']}))
+    .pipe(gulp.dest('dist/'));
+});
 
 gulp.task('styles', () => {
   gulp
@@ -32,7 +40,8 @@ gulp.task('styles', () => {
 });
 
 gulp.task('test', function() {
-    qunit('src/tests/index.html');
+  qunit('src/tests/plain/index.html');
+  qunit('src/tests/jquery/index.html');
 });
 
 gulp.task('default', ['styles', 'test']);

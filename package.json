@@ -1,10 +1,10 @@
 {
   "name": "reframe.js",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "index.html",
   "scripts": {
-    "test": "responsive iframes"
+    "test": "reframe.js"
   },
   "repository": {
     "type": "git",
