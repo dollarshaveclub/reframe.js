@@ -44,4 +44,4 @@ gulp.task('test', function() {
   qunit('src/tests/jquery/index.html');
 });
 
-gulp.task('default', ['styles', 'test']);
+gulp.task('default', ['scripts', 'styles', 'test']);

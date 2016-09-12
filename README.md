@@ -53,3 +53,25 @@ reframe('selector:not([not this selector])');
 
 This plugin is small - `~1kb` unminified & is meant to do 1 thing - _wrap elements that aren't responsive & make them responsive_. 💪
 
+### Options
+
+If you'd like to not use the classname 'js-reframe', just use your own. 
+
+```javascript
+reframe('selector', 'classname');
+```
+### jQuery
+
+There is [jQuery](https://jquery.com/) version of **Reframe.js** which is even smaller (~77b) than plain **Reframe.js** unminified - so use it if you're already using jQuery.
+
+```javascript
+$('selector').reframe();
+```
+&, if you'd like to use a customer classname
+
+```javascript
+$('selector').reframe('classname');
+```
+
+
+
