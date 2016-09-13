@@ -62,12 +62,12 @@ reframe('selector', 'classname');
 ```
 ### jQuery
 
-There is [jQuery](https://jquery.com/) version of **Reframe.js** which is even smaller (~77b) than plain **Reframe.js** unminified - so use it if you're already using jQuery.
+You can use **Reframe.js** with jQuery as well. 
 
 ```javascript
 $('selector').reframe();
 ```
-&, if you'd like to use a customer classname
+&, if you'd like to use a custom classname
 
 ```javascript
 $('selector').reframe('classname');

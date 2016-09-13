@@ -4,22 +4,20 @@
   (global.reframe = factory());
 }(this, (function () { 'use strict';
 
-function Reframe(selector, cName) {
-  var frames = document.querySelectorAll(selector);
-  var classname = typeof cName !== 'undefined' ? cName : 'js-reframe';
-  if (frames.length <= 0) return false;
+function Reframe(target, cName) {
+  var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
+  if (!('length' in frames)) {
+    frames = [frames];
+  }
+  var classname = cName || 'js-reframe';
   for (var i = 0; i < frames.length; i++) {
     var frame = frames[i];
     var hasClass = frame.className.split(' ').indexOf(classname);
     if (hasClass >= 0) return false;
     var div = document.createElement('div');
-    var padding = 100;
     var height = frame.offsetHeight;
     var width = frame.offsetWidth;
-    console.log(height, width);
-    if (height !== width) {
-      padding = height / width * 100;
-    }
+    var padding = height / width * 100;
     div.style.paddingTop = padding + '%';
     frame.height = frame.width = '';
     div.className += classname;
@@ -29,8 +27,14 @@ function Reframe(selector, cName) {
   }
   return this;
 }
-function reframe (selector, cssClass) {
-  return new Reframe(selector, cssClass);
+function reframe (target, cName) {
+  return new Reframe(target, cName);
+}
+
+if (window.$ || window.jQuery || window.Zepto) {
+  window.$.fn.reframe = function reframeFunc(cName) {
+    return new Reframe(this, cName);
+  };
 }
 
 return reframe;
