@@ -26,7 +26,9 @@ export default function (target, cName) {
 }
 
 if (window.$ || window.jQuery || window.Zepto) {
-  window.$.fn.reframe = function reframeFunc(cName) {
-    return new Reframe(this, cName);
-  };
+  window.$.fn.extend({
+    reframe: function reframeFunc(cName) {
+      return new Reframe(this, cName);
+    },
+  });
 }
