@@ -51,5 +51,27 @@ reframe('selector:not([not this selector])');
 
 **Reframe.js** is inspired by [FitVids](https://github.com/davatron5000/FitVids.js) & does what FitVids does but without the need for `jQuery`. This makes the plugin highly valuable when including it in a module that has to be very small & with minimal dependencies. Here's a basic [codepen example](http://codepen.io/yowainwright/pen/amzAEo).
 
-This plugin is small - `~1kb` unminified & is meant to do 1 thing - _wrap elements that aren't responsive & make them responsive_. 💪
+This plugin is small - `~1.3kb` unminified & is meant to do 1 thing - _wrap elements that aren't responsive & make them responsive_. 💪
+
+### Options
+
+If you'd like to not use the classname 'js-reframe', just use your own. 
+
+```javascript
+reframe('selector', 'classname');
+```
+### jQuery
+
+You can use **Reframe.js** with jQuery as well. 
+
+```javascript
+$('selector').reframe();
+```
+&, if you'd like to use a custom classname
+
+```javascript
+$('selector').reframe('classname');
+```
+
+
 

@@ -4,38 +4,39 @@
   (global.reframe = factory());
 }(this, (function () { 'use strict';
 
-// Reframe.js
-// - runs for all selector unless otherwise specified
-// - does not deal with src, so it will repaint
-// - it JUST creates a fluid wrapper
-function Reframe(selector) {
-  var frames = document.querySelectorAll(selector);
-  if (frames.length <= 0) return false;
+function Reframe(target, cName) {
+  var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
+  if (!('length' in frames)) {
+    frames = [frames];
+  }
+  var classname = cName || 'js-reframe';
   for (var i = 0; i < frames.length; i++) {
     var frame = frames[i];
+    var hasClass = frame.className.split(' ').indexOf(classname);
+    if (hasClass >= 0) return false;
+    var div = document.createElement('div');
     var height = frame.offsetHeight;
     var width = frame.offsetWidth;
-    var div = document.createElement('div');
-    var padding = 100;
-    if (height !== width) {
-      padding = height / width * 100;
-    }
+    var padding = height / width * 100;
     div.style.paddingTop = padding + '%';
-    frame.removeAttribute('height');
-    frame.removeAttribute('width');
-    frame.removeAttribute('style');
-    if (!div.classList.contains('js-reframe')) {
-      div.className += 'js-reframe';
-      frame.parentNode.insertBefore(div, frame);
-    }
+    frame.height = frame.width = '';
+    div.className += classname;
+    frame.parentNode.insertBefore(div, frame);
     frame.parentNode.removeChild(frame);
     div.appendChild(frame);
   }
   return this;
 }
+function reframe (target, cName) {
+  return new Reframe(target, cName);
+}
 
-function reframe (selector) {
-  return new Reframe(selector);
+if (window.$ || window.jQuery || window.Zepto) {
+  window.$.fn.extend({
+    reframe: function reframeFunc(cName) {
+      return new Reframe(this, cName);
+    }
+  });
 }
 
 return reframe;
