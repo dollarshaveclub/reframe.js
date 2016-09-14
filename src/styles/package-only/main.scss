@@ -32,6 +32,10 @@ figure {
   padding: 1.5rem;
   text-align: center;
   text-shadow: 1px 1px 0 $color-medium;
+  figcaption a {
+    color: white;
+    text-decoration: none;
+  }
   .reframe {
     font-size: 1.5rem;
     @include media-query-utility($width-small) {
