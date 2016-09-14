@@ -4,7 +4,7 @@
   (global.reframe = factory());
 }(this, (function () { 'use strict';
 
-function Reframe(target, cName) {
+function reframe(target, cName) {
   var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in frames)) {
     frames = [frames];
@@ -13,7 +13,7 @@ function Reframe(target, cName) {
   for (var i = 0; i < frames.length; i++) {
     var frame = frames[i];
     var hasClass = frame.className.split(' ').indexOf(classname);
-    if (hasClass >= 0) return false;
+    if (hasClass >= 0) return;
     var div = document.createElement('div');
     var height = frame.offsetHeight;
     var width = frame.offsetWidth;
@@ -25,16 +25,12 @@ function Reframe(target, cName) {
     frame.parentNode.removeChild(frame);
     div.appendChild(frame);
   }
-  return this;
-}
-function reframe (target, cName) {
-  return new Reframe(target, cName);
 }
 
-if (window.$ || window.jQuery || window.Zepto) {
+if (window.$) {
   window.$.fn.extend({
     reframe: function reframeFunc(cName) {
-      return new Reframe(this, cName);
+      return reframe(this, cName);
     }
   });
 }

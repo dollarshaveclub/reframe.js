@@ -1,4 +1,4 @@
-function Reframe(target, cName) {
+export default function reframe(target, cName) {
   let frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in frames)) {
     frames = [frames];
@@ -7,7 +7,7 @@ function Reframe(target, cName) {
   for (let i = 0; i < frames.length; i++) {
     const frame = frames[i];
     const hasClass = frame.className.split(' ').indexOf(classname);
-    if (hasClass >= 0) return false;
+    if (hasClass >= 0) return;
     const div = document.createElement('div');
     const height = frame.offsetHeight;
     const width = frame.offsetWidth;
@@ -19,16 +19,12 @@ function Reframe(target, cName) {
     frame.parentNode.removeChild(frame);
     div.appendChild(frame);
   }
-  return this;
-}
-export default function (target, cName) {
-  return new Reframe(target, cName);
 }
 
-if (window.$ || window.jQuery || window.Zepto) {
+if (window.$) {
   window.$.fn.extend({
     reframe: function reframeFunc(cName) {
-      return new Reframe(this, cName);
+      return reframe(this, cName);
     },
   });
 }

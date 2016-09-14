@@ -18,9 +18,9 @@ body {
   color: $color-light;
   font-family: $font-family-copy;
   margin: 0;
-  background-color: rgb(252, 191, 159);
-  @include filter-gradient(#fcbf9f, #ffa696, vertical);
-  @include background(linear-gradient(top, #fcbf9f 0%, #ffa696 100%));
+  background-color: rgb(249,208,187);
+  @include filter-gradient(#f9d0bb, #ffb0a3, vertical);
+  @include background(linear-gradient(top,#f9d0bb 0%, #ffb0a3 100%));
   a {
     color: $color-light;
     text-decoration: underline;
