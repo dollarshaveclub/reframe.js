@@ -12,6 +12,7 @@ Reframe.js is a javascript plugin that makes unresponsive elements responsive.
 ```terminal
 npm install reframe.js --save-dev
 ```
+or
 ```terminal
 bower install reframe.js --save-dev
 ```
