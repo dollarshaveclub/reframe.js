@@ -4,7 +4,7 @@
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "scripts": {
-    "test": "dist/reframe.js"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
