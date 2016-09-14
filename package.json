@@ -1,10 +1,11 @@
 {
   "name": "reframe.js",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push origin --tags"
   },
   "repository": {
     "type": "git",
