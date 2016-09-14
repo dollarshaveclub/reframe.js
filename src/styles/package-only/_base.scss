@@ -4,20 +4,49 @@
 */
 html {
   box-sizing: border-box;
-  font-family: $font-family-default; 
-  @include prefix(text-size-adjust, 2, webkit ms);
+  font-family: $font-family-default;
+  text-size-adjust: 2;
 }
 
-*, 
-*:before, 
+*,
+*:before,
 *:after {
   box-sizing: inherit;
 }
 
 body {
-  color: $color-default;
+  color: $color-light;
   font-family: $font-family-copy;
   margin: 0;
+  background-color: rgb(252, 191, 159);
+  @include filter-gradient(#fcbf9f, #ffa696, vertical);
+  @include background(linear-gradient(top, #fcbf9f 0%, #ffa696 100%));
+  a {
+    color: $color-light;
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-family: $font-script;
+  font-size: 3rem;
+  text-shadow: 1px 1px 0 $color-medium;
+  @include media-query-utility($width-small) {
+    font-size: 6rem;
+  }
+  & + p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: 2rem auto;
+    max-width: calc(100% - #{$spacing-unit * 2});
+    text-align: center;
+    @include media-query-utility($width-small) {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin: 3rem auto;
+      max-width: $width-content;
+    }
+  }
 }
 
 article,
@@ -27,11 +56,11 @@ figcaption,
 figure,
 footer,
 header,
-main, 
+main,
 menu,
 nav,
 section,
-summary { 
+summary {
   display: block;
 }
 
@@ -51,15 +80,15 @@ progress {
   vertical-align: baseline;
 }
 
-template, 
+template,
 [hidden] {
   display: none;
 }
 
 abbr[title] {
   border-bottom: none;
-  text-decoration: underline; 
-  text-decoration: underline dotted; 
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 b,
@@ -117,17 +146,17 @@ samp {
 }
 
 hr {
-  box-sizing: content-box; 
-  height: 0; 
-  overflow: visible; 
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 button,
 input,
 select,
 textarea {
-  font: inherit; 
-  margin: 0; 
+  font: inherit;
+  margin: 0;
 }
 
 optgroup {
@@ -135,8 +164,8 @@ optgroup {
 }
 
 button,
-input, 
-select { 
+input,
+select {
   overflow: visible;
 }
 
@@ -170,11 +199,11 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box; 
-  color: inherit; 
-  display: table; 
-  max-width: 100%; 
-  padding: 0; 
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
   white-space: normal;
 }
 
@@ -240,7 +269,7 @@ figure > img {
 /**
  * Lists
  */
-ul, 
+ul,
 ol {
   list-style-type: none;
   margin-left: 0;
@@ -270,7 +299,7 @@ a {
   &:active,
   &:hover {
     outline-width: 0;
-  }   
+  }
 }
 
 /**
