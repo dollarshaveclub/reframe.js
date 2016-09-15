@@ -19,7 +19,7 @@ bower install reframe.js --save-dev
 
 ### Run
 
-1. Include **reframe.js** into your `vendor` file or in a `<script>` tag.
+1. Add `dist/reframe.js`.
 2. Add reframe `css/scss`  to your `css`.
 3. `reframe` the element you'd like to re-frame.
 
