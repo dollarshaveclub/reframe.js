@@ -21,10 +21,10 @@ bower install reframe.js --save-dev
 
 1. Include **reframe.js** into your `vendor` file or in a `<script>` tag.
 2. Add reframe `css/scss`  to your `css`.
-3. `reframe` the element you'd like to re-frame. 
+3. `reframe` the element you'd like to re-frame.
 
 ```javascript
-reframe('selector');🔥
+reframe('selector'); // 🔥
 ```
 
 ### Examples
@@ -56,14 +56,14 @@ This plugin is small - `~1.3kb` unminified & is meant to do 1 thing - _wrap elem
 
 ### Options
 
-If you'd like to not use the classname 'js-reframe', just use your own. 
+If you'd like to not use the classname 'js-reframe', just use your own.
 
 ```javascript
 reframe('selector', 'classname');
 ```
 ### jQuery
 
-You can use **Reframe.js** with jQuery as well. 
+You can use **Reframe.js** with jQuery as well.
 
 ```javascript
 $('selector').reframe();
