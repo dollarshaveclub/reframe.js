@@ -1,0 +1,28 @@
+{
+  "name": "reframe.js-landing-age",
+  "version": "0.0.1",
+  "description": "The landing pages of reframe.js",
+  "main": "index.html",
+  "scripts": {
+    "test": "gulp "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dollarshaveclub/reframe.js.git"
+  },
+  "author": "Jeffry Wainwright (jjwainwright2@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dollarshaveclub/reframe.js/issues"
+  },
+  "homepage": "https://github.com/dollarshaveclub/reframe.js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "reframe.js": "^0.2.8",
+    "sassimple": "^1.2.4"
+  }
+}
