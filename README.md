@@ -46,7 +46,7 @@ reframe('selector:not([not this selector])');
 
 ### How?
 
-**Reframe.js** removes a specified element's `height & width attributes` & then wraps that element in responsive `div` that is a perfect ratio of the original element's size. This plugin is meant for **embedded content** like `iframes` or `videos`.
+**Reframe.js** removes a specified element's `height & width attributes` & then wraps that element in `div` that is an [intrinsic ratio](http://alistapart.com/article/creating-intrinsic-ratios-for-video) of the original element. This plugin is great for **embedded content** like `iframes` or `videos`.
 
 ### Why?
 
