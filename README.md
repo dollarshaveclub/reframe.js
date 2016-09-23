@@ -5,44 +5,32 @@
 
 ## 🖼 Reframe.js
 
-Reframe.js is a javascript plugin that makes unresponsive elements responsive.
+Reframe.js is a javascript plugin that makes elements scale at a fixed ratio
 
-### Setup
-
-```terminal
-npm install reframe.js --save-dev
+### Installing
+Install via NPM or Bower
+```sh
+npm i reframe.js --save-dev
 ```
 or
-```terminal
-bower install reframe.js --save-dev
+```sh
+bower i reframe.js --save-dev
 ```
 
-### Run
-
+### Setup
 1. Add `dist/reframe.js`.
 2. Add reframe `css/scss`  to your `css`.
 3. `reframe` the element you'd like to re-frame.
 
-```javascript
-reframe('selector'); // 🔥
-```
-
 ### Examples
 
-**Basic**
 ```javascript
-reframe('selector');
+reframe('iframe'); // Wrap all iFrames in the page
+reframe(document.getElementById('my-frame')); // Pass a DOM element
+reframe(document.querySelectorAll('.my-targets')) // Pass a live node list
 ```
 
-**Or Multiples**
-```javascript
-reframe('selector');
-```
-
-**But not this one**
-```javascript
-reframe('selector:not([not this selector])');
-```
+Elements that have been wrapped with reframe will not be wrapped twice.
 
 ### How?
 
@@ -59,20 +47,15 @@ This plugin is small - `~1.3kb` unminified & is meant to do 1 thing - _wrap elem
 If you'd like to not use the classname 'js-reframe', just use your own.
 
 ```javascript
-reframe('selector', 'classname');
+reframe('iframe', 'my-classname');
 ```
 ### jQuery
 
 You can use **Reframe.js** with jQuery as well.
 
 ```javascript
-$('selector').reframe();
+$('iframe').reframe();
+
+// While using a custom class name
+$('iframe').reframe('my-classname');
 ```
-&, if you'd like to use a custom classname
-
-```javascript
-$('selector').reframe('classname');
-```
-
-
-
