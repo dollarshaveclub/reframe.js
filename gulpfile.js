@@ -22,7 +22,8 @@ gulp.task('styles', () => {
 });
 
 gulp.task('test', function() {
-  qunit('src/tests/index.html');
+  qunit('src/tests/reframe/index.html');
+  qunit('src/tests/noframe/index.html');
 });
 
 gulp.task('default', ['styles', 'test']);
