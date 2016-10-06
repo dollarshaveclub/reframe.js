@@ -21,8 +21,8 @@ export default function reframe(target, cName) {
   }
 }
 
-if (window.$) {
-  window.$.fn.extend({
+if (window.jQuery) {
+  window.jQuery.fn.extend({
     reframe: function reframeFunc(cName) {
       return reframe(this, cName);
     },
