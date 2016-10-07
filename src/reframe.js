@@ -21,10 +21,11 @@ export default function reframe(target, cName) {
   }
 }
 
-if (window.jQuery) {
-  window.jQuery.fn.extend({
+const plugin = window.$ || window.jQuery || window.Zepto;
+if (plugin) {
+  plugin.fn.extend({
     reframe: function reframeFunc(cName) {
       return reframe(this, cName);
-    },
+    }
   });
 }
