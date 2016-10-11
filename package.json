@@ -15,7 +15,12 @@
     "js",
     "iframes",
     "fluid",
-    "responsive"
+    "responsive",
+    "video",
+    "fitvids",
+    "youtube",
+    "embeds",
+    "padding-top"
   ],
   "author": "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)",
   "license": "ISC",
