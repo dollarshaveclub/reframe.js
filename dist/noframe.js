@@ -13,9 +13,9 @@ function noframe(target, container) {
     var el = els[i];
     var height = el.offsetHeight;
     var width = el.offsetWidth;
-    if (typeof container !== 'undefined' && container !== 'false') {
-      var parent = document.querySelectorAll(container);
-      var maxwidth = window.getComputedStyle(parent[0], null).getPropertyValue('max-width');
+    if (typeof container !== 'undefined') {
+      var parent = document.querySelector(container);
+      var maxwidth = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       el.style.width = '100%';
       el.style.maxHeight = 'calc(' + maxwidth + ' * ' + height + '/' + width + ')';
     } else {

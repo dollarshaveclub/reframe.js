@@ -20,15 +20,12 @@ function reframe(target, cName) {
     var padding = height / width * 100;
     div.style.paddingTop = padding + '%';
     div.style.position = 'relative';
-    div.style.width = '100%';
+    div.style.width = frame.style.width = frame.style.height = '100%';
     div.className += classname;
     frame.parentNode.insertBefore(div, frame);
     frame.parentNode.removeChild(frame);
-    frame.style.height = '100%';
-    frame.style.left = '0';
+    frame.style.left = frame.style.top = '0';
     frame.style.position = 'absolute';
-    frame.style.top = '0';
-    frame.style.width = '100%';
     div.appendChild(frame);
   }
 }

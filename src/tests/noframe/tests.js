@@ -14,10 +14,6 @@ QUnit.test("noframe this false set", function(assert) {
   noframe('.iframe');
   assert.equal(document.querySelectorAll('.iframe').length, 1, 'there is 1 iframe with the class .iframe');
 });
-QUnit.test("test this iframe has its own max width", function(assert) {
-  noframe('.unique', 'false');
-  assert.equal(document.querySelectorAll('.unique').length, 1, 'there is 1 iframe with the class .unique');
-});
 QUnit.test("test this iframe with jQuery", function(assert) {
   $('#jQuery').noframe();
   assert.equal(document.querySelectorAll('#jQuery').length, 1, 'there is 1 iframe with the class .unique');

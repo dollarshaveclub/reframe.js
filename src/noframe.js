@@ -7,7 +7,7 @@ export default function noframe(target, container) {
     const el = els[i];
     const height = el.offsetHeight;
     const width = el.offsetWidth;
-    if (typeof container !== 'undefined' && container !== 'false') {
+    if (typeof container !== 'undefined') {
       const parent = document.querySelector(container);
       const maxwidth = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       el.style.width = '100%';
