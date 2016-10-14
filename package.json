@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
