@@ -19,16 +19,20 @@ function reframe(target, cName) {
     var width = frame.offsetWidth;
     var padding = height / width * 100;
     div.style.paddingTop = padding + '%';
-    frame.height = frame.width = '';
+    div.style.position = 'relative';
+    div.style.width = frame.style.width = frame.style.height = '100%';
     div.className += classname;
     frame.parentNode.insertBefore(div, frame);
     frame.parentNode.removeChild(frame);
+    frame.style.left = frame.style.top = '0';
+    frame.style.position = 'absolute';
     div.appendChild(frame);
   }
 }
 
-if (window.$) {
-  window.$.fn.extend({
+var plugin = window.$ || window.jQuery || window.zepto;
+if (plugin) {
+  plugin.fn.extend({
     reframe: function reframeFunc(cName) {
       return reframe(this, cName);
     }

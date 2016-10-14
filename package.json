@@ -22,7 +22,7 @@
     "gulp-purifycss": "^0.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob": "^1.0.6",
-    "reframe.js": "^0.2.8",
+    "reframe.js": "^0.3.2",
     "sassimple": "^1.2.4"
   }
 }

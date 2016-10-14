@@ -49,7 +49,6 @@
             <li>
               Add <code>dist/reframe.js</code>.
             </li>
-            <li>Add reframe <code>css/scss</code> to your css.</li>
             <li>reframe the element you'd like to re-frame.</li>
           </ol>
         </div>
@@ -90,6 +89,37 @@
           <p>&amp;, if you'd like to use a custom classname</p>
           <pre><code>$('selector').reframe('classname');</code></pre>
         </div>
+				<div>
+          <h2>New! <span class="reframe">Noframe.js</span></h2>
+					<p>Noframe.js makes the same ratio as Reframe.js using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">css calc</a>.
+					<p>Noframe.js's doesn't wrap the element you'd like to be responsive. It, instead, does a calculation based on its or a parent element's max-width. Here's a basic <a href="http://codepen.io/yowainwright/pen/19cd3f2fc3e00ce80e36285feae20b77">codepen example</a>.</p>
+        </div>
+				<div>
+					<h2><span class="reframe">Noframe.js</span> Notes</h2>
+					<p>The reframed element requires a parent element with a max width to scale above the selected elements intial size otherwise the reframed element will only scale below its initial size. 👍</p>
+				</div>
+				<div>
+					<h2>Setup</h2>
+					<ol>
+						<li>Add dist/noframe.js</li>
+						<li>noframe the element you'd like to re-frame.</li>
+					</ol>
+				</div>
+				<div>
+					<h2>Examples</h2>
+					<pre><code>noframe('iframe');</code></pre>
+					<h3>Or provide a parent element with a <code>max-width</code></h3>
+					<pre><code>noframe('iframe', 'parent');</code></pre>
+					<h2>jQuery</h2>
+					<pre><code>$('iframe').noframe();</code></pre>
+					<h3>Or add a parent element with a <code>max-width</code></h3>
+					<pre><code>$('iframe').noframe('parent');</code></pre>
+				</div>
+				<div>
+					<h2>Reframe.js or Noframe.js?</h2>
+					<p>Reframe.js offers the simpliest solution to making elements scale at an intrinsic ratio.</p>
+					<p>Noframe.js doesn't wrap the selected element to make it scale at an intrinsic ratio. Noframe.js is the ideal solution when various events, like tracking events, could be affected when an element is wrapped. It does require a width or max-width which can involve a bit more setup awareness.</p>
+				</div>
         <p class="center">
           Made by <a href="https://github.com/dollarshaveclub">Dollar Shave Club Engineering</a>.
         </p>
@@ -114,5 +144,11 @@
   ga('send', 'pageview');
 
 </script>
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'reframe-js/Lobby'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 	</body>
 </html>
