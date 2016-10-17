@@ -30,7 +30,7 @@ function reframe(target, cName) {
   }
 }
 
-var plugin = window.$ || window.jQuery || window.zepto;
+var plugin = window.$ || window.jQuery || window.Zepto;
 if (plugin) {
   plugin.fn.extend({
     reframe: function reframeFunc(cName) {

@@ -24,7 +24,7 @@ export default function reframe(target, cName) {
   }
 }
 
-const plugin = window.$ || window.jQuery || window.zepto;
+const plugin = window.$ || window.jQuery || window.Zepto;
 if (plugin) {
   plugin.fn.extend({
     reframe: function reframeFunc(cName) {
