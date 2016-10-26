@@ -4,7 +4,6 @@
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
-    "src/styles",
     "dist"
   ],
   "scripts": {
