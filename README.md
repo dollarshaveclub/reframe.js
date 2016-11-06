@@ -1,8 +1,8 @@
 ![Reframe.js, reframe your content responsively](https://cloud.githubusercontent.com/assets/1074042/19376472/f01422cc-9192-11e6-950a-04298e406aca.jpg)
 
 
-[![npm version 0.3.5](https://badge.fury.io/js/reframe.js.svg)](https://www.npmjs.com/package/reframe.js)
-[![Bower version 0.3.5](https://badge.fury.io/bo/reframe.js.svg)](https://github.com/dollarshaveclub/reframe.js)
+[![npm version 0.3.6](https://badge.fury.io/js/reframe.js.svg)](https://www.npmjs.com/package/reframe.js)
+[![Bower version 0.3.6](https://badge.fury.io/bo/reframe.js.svg)](https://github.com/dollarshaveclub/reframe.js)
 [![Build Status](https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master)](https://travis-ci.org/dollarshaveclub/reframe.js)
 [![Join the chat at https://gitter.im/reframe-js/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/reframe-js/Lobby)
 [![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/home?status=Reframe+unresponsive+elements+responsively.+%F0%9F%92%AAhttps%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Freframe.js+%40DSCEngineering+%40yowainwright+%23JavaScript)

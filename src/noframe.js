@@ -29,11 +29,13 @@ export default function noframe(target, container) {
     el.style.maxWidth = '100vw';
   }
 }
-const plugin = window.$ || window.jQuery || window.Zepto;
-if (plugin) {
-  plugin.fn.extend({
-    noframe: function noframeFunc(cName) {
-      return noframe(this, cName);
-    },
-  });
+if (typeof window !== 'undefined') {
+  const plugin = window.$ || window.jQuery || window.Zepto;
+  if (plugin) {
+    plugin.fn.extend({
+      noframe: function noframeFunc(cName) {
+        return noframe(this, cName);
+      },
+    });
+  }
 }

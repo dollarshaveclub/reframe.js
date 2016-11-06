@@ -28,11 +28,13 @@ export default function reframe(target, cName) {
   }
 }
 
-const plugin = window.$ || window.jQuery || window.Zepto;
-if (plugin) {
-  plugin.fn.extend({
-    reframe: function reframeFunc(cName) {
-      return reframe(this, cName);
-    },
-  });
+if (typeof window !== 'undefined') {
+  const plugin = window.$ || window.jQuery || window.Zepto;
+  if (plugin) {
+    plugin.fn.extend({
+      reframe: function reframeFunc(cName) {
+        return reframe(this, cName);
+      },
+    });
+  }
 }
