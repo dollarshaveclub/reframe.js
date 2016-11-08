@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
@@ -40,6 +40,9 @@
     "eslint": "^3.4.0",
     "eslint-config-airbnb": "6.1.0",
     "gulp": "^3.9.1",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "jquery": "^3.1.0",
     "node-qunit-phantomjs": "^1.4.0",
     "qunit": "^0.9.1",
