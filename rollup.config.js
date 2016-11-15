@@ -14,6 +14,7 @@ export default {
   format: 'umd',
   moduleName: `${process.env.entry}`,
   sourceMap: false, // removes the souremap at the bottom of the file
+  treeshake: false,
   plugins: [
     resolve({
       jsnext: true,

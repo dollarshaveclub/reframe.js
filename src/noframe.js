@@ -32,10 +32,9 @@ export default function noframe(target, container) {
 if (typeof window !== 'undefined') {
   const plugin = window.$ || window.jQuery || window.Zepto;
   if (plugin) {
-    plugin.fn.extend({
-      noframe: function noframeFunc(cName) {
-        return noframe(this, cName);
-      },
-    });
+    plugin.fn.noframe = function noframePlugin(cName) {
+      noframe(this, cName);
+      return this;
+    };
   }
 }

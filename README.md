@@ -14,13 +14,17 @@ Reframe.js is a javascript plugin that makes elements scale at a fixed ratio.
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** wrap the selected elements.
 
 ### Installing
-Install via NPM
+NPM
 ```sh
 npm i reframe.js --save-dev
 ```
-or Bower
+Bower
 ```sh
 bower i reframe.js --save-dev
+```
+Yarn
+```sh
+yarn add reframe.js --dev
 ```
 
 ### Setup
