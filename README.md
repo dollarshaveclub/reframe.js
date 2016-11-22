@@ -16,15 +16,15 @@ Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected el
 ### Installing
 NPM
 ```sh
-npm i reframe.js --save-dev
+npm i reframe.js --save
 ```
 Bower
 ```sh
-bower i reframe.js --save-dev
+bower i reframe.js --save
 ```
 Yarn
 ```sh
-yarn add reframe.js --dev
+yarn add reframe.js 
 ```
 
 ### Setup
