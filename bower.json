@@ -5,7 +5,7 @@
   "authors": [
     "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)"
   ],
-  "license": "ISC",
+  "license": "Copyright (c) 2016 Dollar Shave Club, Inc.",
   "homepage": "https://github.com/dollarshaveclub/reframe.js",
   "ignore": [
     "**/.*",

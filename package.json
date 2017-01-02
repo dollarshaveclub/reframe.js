@@ -26,7 +26,7 @@
     "padding-top"
   ],
   "author": "Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)",
-  "license": "ISC",
+  "license": "Copyright (c) 2016 Dollar Shave Club, Inc.",
   "bugs": {
     "url": "https://github.com/dollarshaveclub/reframe.js/issues"
   },
