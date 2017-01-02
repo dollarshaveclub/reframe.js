@@ -1,18 +1,18 @@
 // rollup bundle commands
-// rollup -c --environment entry:noframe
-// rollup -c --environment entry:reframe
+// rollup -c => builds reframe (default)
+// rollup -c --environment entry:noframe => builds noframe
 
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import uglify from 'rollup-plugin-uglify';
 
+const name = process.env.entry ? process.env.entry : 'reframe';
 export default {
-  entry: `src/${process.env.entry}.js`,
-  dest: `dist/${process.env.entry}.js`,
+  entry: `src/${name}.js`,
+  dest: `dist/${name}.js`,
   format: 'umd',
-  moduleName: `${process.env.entry}`,
+  moduleName: `${name}`,
   sourceMap: false, // removes the souremap at the bottom of the file
   treeshake: false,
   plugins: [
