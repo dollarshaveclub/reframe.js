@@ -27,6 +27,8 @@ This particularly awesome for making embedded stuff, like videos or playlists, s
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
 
 ### Installing
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg)](https://greenkeeper.io/)
 NPM
 ```sh
 npm i reframe.js --save
