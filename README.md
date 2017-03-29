@@ -9,6 +9,9 @@
 <a href="https://github.com/dollarshaveclub/reframe.js">
   <img alt="Bower version 0.3.6" src="https://badge.fury.io/bo/reframe.js.svg" />
 </a>
+<a href="https://greenkeeper.io/">
+  <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
+</a>
 <a href="https://travis-ci.org/dollarshaveclub/reframe.js">
   <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master" />
 </a>
@@ -28,7 +31,6 @@ Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected el
 
 ### Installing
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg)](https://greenkeeper.io/)
 NPM
 ```sh
 npm i reframe.js --save
