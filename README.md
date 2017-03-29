@@ -9,6 +9,9 @@
 <a href="https://github.com/dollarshaveclub/reframe.js">
   <img alt="Bower version 0.3.6" src="https://badge.fury.io/bo/reframe.js.svg" />
 </a>
+<a href="https://greenkeeper.io/">
+  <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
+</a>
 <a href="https://travis-ci.org/dollarshaveclub/reframe.js">
   <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master" />
 </a>
@@ -27,6 +30,7 @@ This particularly awesome for making embedded stuff, like videos or playlists, s
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
 
 ### Installing
+
 NPM
 ```sh
 npm i reframe.js --save
