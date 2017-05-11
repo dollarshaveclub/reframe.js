@@ -1,7 +1,7 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	(global.reframe = factory());
+	(factory());
 }(this, (function () { 'use strict';
 
 /* global document, window */
@@ -34,15 +34,14 @@ function framer(target, cName) {
   div.appendChild(frame);
 }
 
-function reframe(target, cName) {
-  var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
-  if (!('length' in frames)) frames = [frames];
-  for (var i = 0; i < frames.length; i += 1) {
-    var frame = frames[i];
-    framer(frame, cName);
+/* global document, window */
+if (typeof window !== 'undefined') {
+  var plugin = window.$ || window.jQuery || window.Zepto;
+  if (plugin) {
+    plugin.fn.reframe = function reframePlugin(cName) {
+      reframe(this, cName);
+    };
   }
 }
-
-return reframe;
 
 })));

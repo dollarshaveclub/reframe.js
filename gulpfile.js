@@ -15,7 +15,10 @@ const banner = ['/**',
 
 gulp.task('test', function() {
   qunit('tests/reframe/index.html');
-  return qunit('tests/noframe/index.html');
+  qunit('tests/noframe/index.html');
+  qunit('tests/jquery-reframe/index.html');
+  qunit('tests/jquery-noframe/index.html');
+  return;
 });
 
 gulp.task('minify', function() {
@@ -25,6 +28,16 @@ gulp.task('minify', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('dist/'));
   gulp.src('dist/noframe.js')
+    .pipe(uglify())
+    .pipe(head(banner, { pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/'));
+  gulp.src('dist/jquery.reframe.js')
+    .pipe(uglify())
+    .pipe(head(banner, { pkg }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('dist/'));
+  gulp.src('dist/jquery.noframe.js')
     .pipe(uglify())
     .pipe(head(banner, { pkg }))
     .pipe(rename({ suffix: '.min' }))

@@ -1,6 +1,11 @@
 // rollup bundle commands
-// rollup -c => builds reframe (default)
-// rollup -c --environment entry:noframe => builds noframe
+// -----
+/*
+  rollup -c => builds reframe (default)
+  rollup -c --environment entry:noframe => builds noframe
+  rollup -c --environment entry:jquery.reframe => builds jquery.reframe
+  rollup -c --environment entry:jquery.noframe => builds jquery.noframe
+*/
 
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
