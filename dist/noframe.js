@@ -4,12 +4,13 @@
 	(global.noframe = factory());
 }(this, (function () { 'use strict';
 
+/* global document, window */
 function noframe(target, container) {
   var els = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in els)) {
     els = [els];
   }
-  for (var i = 0; i < els.length; i++) {
+  for (var i = 0; i < els.length; i + 1) {
     var el = els[i];
     var height = el.offsetHeight;
     var width = el.offsetWidth;
@@ -21,7 +22,8 @@ function noframe(target, container) {
     } else {
       var _maxwidth = width + 'px';
       el.style.display = 'block';
-      el.style.marginLeft = el.style.marginRight = 'auto';
+      el.style.marginLeft = 'auto';
+      el.style.marginRight = 'auto';
       var fullwidth = _maxwidth + 'px';
       if (width > el.parentElement.offsetWidth) {
         fullwidth = el.parentElement.offsetWidth;

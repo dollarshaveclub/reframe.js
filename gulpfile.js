@@ -15,7 +15,7 @@ const banner = ['/**',
 
 gulp.task('test', function() {
   qunit('tests/reframe/index.html');
-  qunit('tests/noframe/index.html');
+  return qunit('tests/noframe/index.html');
 });
 
 gulp.task('minify', function() {

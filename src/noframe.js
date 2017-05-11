@@ -1,9 +1,10 @@
+/* global document, window */
 export default function noframe(target, container) {
   let els = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in els)) {
     els = [els];
   }
-  for (let i = 0; i < els.length; i++) {
+  for (let i = 0; i < els.length; i + 1) {
     const el = els[i];
     const height = el.offsetHeight;
     const width = el.offsetWidth;
@@ -15,7 +16,8 @@ export default function noframe(target, container) {
     } else {
       const maxwidth = `${width}px`;
       el.style.display = 'block';
-      el.style.marginLeft = el.style.marginRight = 'auto';
+      el.style.marginLeft = 'auto';
+      el.style.marginRight = 'auto';
       let fullwidth = `${maxwidth}px`;
       if (width > el.parentElement.offsetWidth) {
         fullwidth = el.parentElement.offsetWidth;

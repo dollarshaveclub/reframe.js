@@ -4,12 +4,13 @@
 	(global.reframe = factory());
 }(this, (function () { 'use strict';
 
+/* global document, window */
 function reframe(target, cName) {
   var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in frames)) frames = [frames];
   var classname = cName || 'js-reframe';
 
-  for (var i = 0; i < frames.length; i++) {
+  for (var i = 0; i < frames.length; i + 1) {
     var frame = frames[i];
     var hasClass = frame.className.split(' ').indexOf(classname) !== -1;
     if (hasClass) return;
@@ -25,8 +26,10 @@ function reframe(target, cName) {
     div.style.paddingTop = padding + '%';
 
     frame.style.position = 'absolute';
-    frame.style.width = frame.style.height = '100%';
-    frame.style.left = frame.style.top = '0';
+    frame.style.width = '100%';
+    frame.style.height = '100%';
+    frame.style.left = '0';
+    frame.style.top = '0';
 
     frame.parentNode.insertBefore(div, frame);
     frame.parentNode.removeChild(frame);
@@ -39,7 +42,6 @@ if (typeof window !== 'undefined') {
   if (plugin) {
     plugin.fn.reframe = function reframePlugin(cName) {
       reframe(this, cName);
-      return;
     };
   }
 }
