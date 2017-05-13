@@ -7,7 +7,13 @@
     "dist"
   ],
   "scripts": {
-    "rollup-all": "rollup -c && rollup -c --environment entry:noframe && rollup -c --environment entry:jquery.noframe && rollup -c --environment entry:jquery.reframe",
+    "rollup": "rollup -c && rollup -c --environment entry:noframe",
+    "rollup-jquery": "rollup -c --environment entry:jquery.noframe && rollup -c --environment entry:jquery.reframe",
+    "rollup-all": "npm run rollup && npm run rollup-jquery",
+    "test-reframe": "rollup && gulp test-reframe",
+    "test-noframe": "rollup && gulp test-noframe",
+    "test-jquery-reframe": "rollup && gulp test-jquery-reframe",
+    "test-jquery-noframe": "rollup && gulp test-jquery-noframe",
     "test": "npm run rollup-all && gulp test",
     "minify": "npm run rollup-all && gulp minify",
     "build": "npm run rollup-all && gulp",
