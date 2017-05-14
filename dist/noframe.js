@@ -61,6 +61,15 @@ function noframe(target, container) {
   }
 }
 
+if (typeof window !== 'undefined') {
+  var plugin = window.$ || window.jQuery || window.Zepto;
+  if (plugin) {
+    plugin.fn.noframe = function noframePlugin(cName) {
+      noframe(this, cName);
+    };
+  }
+}
+
 return noframe;
 
 })));

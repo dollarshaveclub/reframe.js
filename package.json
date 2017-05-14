@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "2.0.0",
+  "version": "1.1.0",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "rollup": "rollup -c && rollup -c --environment entry:noframe",
-    "rollup-jquery": "rollup -c --environment entry:jquery.noframe && rollup -c --environment entry:jquery.reframe",
-    "rollup-all": "npm run rollup && npm run rollup-jquery",
+    "rollup-all": "npm run rollup",
     "test-reframe": "rollup && gulp test-reframe",
     "test-noframe": "rollup && gulp test-noframe",
     "test-jquery-reframe": "rollup && gulp test-jquery-reframe",
