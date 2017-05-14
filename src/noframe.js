@@ -47,9 +47,9 @@ function noframer(target, container) {
 // plugin code 🔌
 // ---------------
 export default function noframe(target, container) {
-  let frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
+  let frames = (typeof target === 'string') ? document.querySelectorAll(target) : target;
   if (!('length' in frames)) frames = [frames];
-  for (let i = 0; i < frames.length; i + 1) {
+  for (let i = 0; i < frames.length; i += 1) {
     const frame = frames[i];
     noframer(frame, container);
   }
