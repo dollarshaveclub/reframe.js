@@ -21,6 +21,6 @@ before_script:
   - npm install node-qunit-phantomjs
 
 after_install:
-  - npm run build
+  - npm test
 
 script: gulp
