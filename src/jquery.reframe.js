@@ -1,5 +1,5 @@
 /* global document, window */
-import reframe from './reframe';
+import reframer from './reframer';
 
 export default function reframe(target, cName) {
   let frames = (typeof target === 'string') ? document.querySelectorAll(target) : target;

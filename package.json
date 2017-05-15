@@ -1,21 +1,19 @@
 {
   "name": "reframe.js",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "rollup": "rollup -c && rollup -c --environment entry:noframe",
-    "rollup-all": "npm run rollup",
-    "test-reframe": "rollup && gulp test-reframe",
-    "test-noframe": "rollup && gulp test-noframe",
-    "test-jquery-reframe": "rollup && gulp test-jquery-reframe",
-    "test-jquery-noframe": "rollup && gulp test-jquery-noframe",
+    "test-reframe": "gulp build-reframe && gulp test-reframe",
+    "test-noframe": "gulp build-noframe && gulp test-noframe",
+    "test-jquery-reframe": "gulp build-jquery-reframe && gulp test-jquery-reframe",
+    "test-jquery-noframe": "gulp build-jquery-noframe && gulp test-jquery-noframe",
     "test": "gulp test",
-    "minify": "npm run rollup-all && gulp minify",
-    "build": "npm run rollup-all && gulp",
+    "minify": "gulp minify",
+    "build": "gulp",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
   "repository": {
@@ -62,5 +60,10 @@
     "rollup-plugin-eslint": "^3.0.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "gulp-rollup": "^2.11.0",
+    "rollup-plugin-cleanup": "^1.0.0",
+    "rollup-plugin-replace": "^1.1.1"
   }
 }

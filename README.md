@@ -25,7 +25,7 @@
 
 > Reframe.js is a javascript plugin that makes elements scale at a fixed ratio. 
 
-This particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
+This is particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
 
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
 
@@ -77,7 +77,7 @@ reframe('iframe', 'my-classname');
 ```
 ### jQuery
 
-You can use **Reframe.js** with jQuery or Zepto as well.
+**Reframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.reframe.js` for jQuery or Zepto. 
 
 ```javascript
 $('iframe').reframe();
@@ -108,7 +108,7 @@ noframe('iframe', 'parent');
 
 ### jQuery
 
-You can use **Noframe.js** with jQuery as well.
+**Noframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.noframe.js` for jQuery or Zepto. 
 
 ```javascript
 $('iframe').noframe();
