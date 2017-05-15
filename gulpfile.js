@@ -29,7 +29,7 @@ const plugins = ['reframe', 'noframe', 'jquery.reframe', 'jquery.noframe'];
 // minify
 // minify all plugins 🔌
 gulp.task('minify', function() {
-  for (let i = 0; i < plugins.length; i += 1) {
+  for (var i = 0; i < plugins.length; i += 1) {
     plugin = plugins[i];
     gulp.src(`dist/${plugin}.js`)
       .pipe(uglify())
