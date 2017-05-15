@@ -1,6 +1,7 @@
 <p align="center">
   <img alt="Reframe.js, reframe your content responsively" src="https://cloud.githubusercontent.com/assets/1074042/19376472/f01422cc-9192-11e6-950a-04298e406aca.jpg" />
 </p>
+<h1 align="center">🖼 Reframe.js</h1>
 <hr>
 <p align="center">
 <a href="https://www.npmjs.com/package/reframe.js">
@@ -21,13 +22,12 @@
 </p>
 <hr>
 
-<h2 align="center">🖼 Reframe.js</h2>
-
 > Reframe.js is a javascript plugin that makes elements scale at a fixed ratio. 
 
 This is particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
 
 Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected elements at a fixed ratio but **does not** manipulate the dom's element structure at all! This keeps things like analytic events that run on embedded content intact!
+
 
 ### Installing
 
@@ -45,6 +45,7 @@ yarn add reframe.js
 ```
 
 ### Setup
+
 1.  Add `dist/reframe.js`
 2.  `reframe` the element you'd like to re-frame.
 
@@ -86,6 +87,7 @@ $('iframe').reframe();
 $('iframe').reframe('my-classname');
 ```
 <hr>
+
 <h2 id="noframe" align="center">🌐 Noframe.js</h2>
 
 Noframe.js makes the same ratio as Reframe.js using [css calc](https://developer.mozilla.org/en-US/docs/Web/CSS/calc).
