@@ -1,5 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 
+// modules 📥
 const gulp = require('gulp');
 const head = require('gulp-header');
 const uglify = require('gulp-uglify');
@@ -26,49 +27,50 @@ const banner = `/*
 `;
 
 // plugins 🔌
+// --------
+// currently there are 4 ways to use reframe
+// - reframe (vanilla js)
+// - noframe (vanilla js)
+// - jquery.reframe (jQuery/Zepto support for reframe)
+// - jquery.noframe (jQuery/Zepto support for noframe)
 const plugins = ['reframe', 'noframe', 'jquery.reframe', 'jquery.noframe'];
+// rollup plugin defaults
+const resolveObj = {
+  jsnext: true,
+  main: true,
+  browser: true,
+};
+const excludeOjb = {
+  exclude: 'node_modules/**',
+};
+const rollupPlugins = [
+  resolve(resolveObj),
+  commonjs(),
+  babel(excludeOjb),
+  cleanup(),
+];
 
+// builds reframe
 gulp.task('build-reframe', () => {
   rollup.rollup({
     entry: 'src/reframe.js',
-    plugins: [
-      resolve({
-        jsnext: true,
-        main: true,
-        browser: true,
-      }),
-      commonjs(),
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      cleanup(),
-    ],
+    plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
       dest: 'dist/reframe.js',
       format: 'umd',
       moduleName: 'reframe',
-      sourceMap: false, // removes the souremap at the bottom of the file
+      sourceMap: false,
       treeshake: false,
     });
   });
 });
 
+// builds noframe
 gulp.task('build-noframe', () => {
   rollup.rollup({
     entry: 'src/noframe.js',
-    plugins: [
-      resolve({
-        jsnext: true,
-        main: true,
-        browser: true,
-      }),
-      commonjs(),
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      cleanup(),
-    ],
+    plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
       dest: 'dist/noframe.js',
@@ -80,24 +82,11 @@ gulp.task('build-noframe', () => {
   });
 });
 
+// builds jquery reframe
 gulp.task('build-jquery-reframe', () => {
   rollup.rollup({
     entry: 'src/jquery.reframe.js',
-    plugins: [
-      replace({
-        ENVIRONMENT: JSON.stringify( 'production' )
-      }),
-      resolve({
-        jsnext: true,
-        main: true,
-        browser: true,
-      }),
-      commonjs(),
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      cleanup(),
-    ],
+    plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
       dest: 'dist/jquery.reframe.js',
@@ -109,24 +98,11 @@ gulp.task('build-jquery-reframe', () => {
   });
 });
 
+// builds jquery noframe
 gulp.task('build-jquery-noframe', () => {
   rollup.rollup({
     entry: 'src/jquery.noframe.js',
-    plugins: [
-      replace({
-        ENVIRONMENT: JSON.stringify( 'production' )
-      }),
-      resolve({
-        jsnext: true,
-        main: true,
-        browser: true,
-      }),
-      commonjs(),
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      cleanup(),
-    ],
+    plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
       dest: 'dist/jquery.noframe.js',
@@ -138,6 +114,7 @@ gulp.task('build-jquery-noframe', () => {
   });
 });
 
+// builds all reframe plugins
 gulp.task('build', ['build-reframe', 'build-noframe', 'build-jquery-reframe', 'build-jquery-noframe']);
 
 // minify

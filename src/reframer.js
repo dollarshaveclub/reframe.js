@@ -1,6 +1,6 @@
 /* global document, window */
 
-// reframer () 🖼
+// reframer() 🖼
 // -------------
 // takes 2 args:
 // => target: targeted <element>
