@@ -5,6 +5,7 @@ var test = document.getElementById('test');
 const iframes = '<iframe id="iframe" width="315" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe><iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe><iframe class="iframe" width="315" height="560" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe><iframe class="iframe" title="not this one" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe><iframe class="unique" width="560" height="315" src="https://www.youtube.com/embed/6FQsIfE7sZM" frameborder="0" allowfullscreen></iframe>';
 test.insertAdjacentHTML('afterbegin', iframes);
 
+// setup intrinsic ra
 var idIframe = $('#iframe');
 var iframeWidth = idIframe.width();
 var iframeHeight = idIframe.height();
@@ -21,7 +22,6 @@ QUnit.test('reframe by #Id', function(assert) {
 // test that reframe.js works when selecting multiple elements with classes
 QUnit.test('reframe <elements> with multiple classes', function(assert) {
   reframe('.iframe');
-  console.log('TEST: ', $('.js-reframe .iframe').length);
   assert.equal($('.js-reframe .iframe').length, 3, 'there are 3 reframed <elements> with similar classes');
 });
 
