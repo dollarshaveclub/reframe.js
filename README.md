@@ -20,7 +20,8 @@
 </p>
 <hr>
 <h1 align="center">🖼 Reframe.js</h1>
-> Reframe.js is a javascript plugin that makes elements scale at a fixed ratio. 
+
+<h4 align="center">Reframe.js is a javascript plugin that makes elements scale at a fixed ratio.</h4>
 
 This is particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
 
