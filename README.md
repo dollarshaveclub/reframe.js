@@ -1,27 +1,25 @@
 <p align="center">
-  <img alt="Reframe.js, reframe your content responsively" src="https://cloud.githubusercontent.com/assets/1074042/19376472/f01422cc-9192-11e6-950a-04298e406aca.jpg" />
+  <img alt="Reframe.js, reframe your content responsively" src="http://imgh.us/reframe.svg" width="400" />
 </p>
-<h1 align="center">🖼 Reframe.js</h1>
-<hr>
 <p align="center">
-<a href="https://www.npmjs.com/package/reframe.js">
-  <img alt="npm version 0.3.6" src="https://badge.fury.io/js/reframe.js.svg" />
-</a>
-<a href="https://github.com/dollarshaveclub/reframe.js">
-  <img alt="Bower version 0.3.6" src="https://badge.fury.io/bo/reframe.js.svg" />
-</a>
-<a href="https://greenkeeper.io/">
-  <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
-</a>
-<a href="https://travis-ci.org/dollarshaveclub/reframe.js">
-  <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master" />
-</a>
-<a href="https://twitter.com/home?status=Reframe+unresponsive+elements+responsively.+%F0%9F%92%AAhttps%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Freframe.js+%40DSCEngineering+%40yowainwright+%23JavaScript">
-  <img alt="Share" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" />
-</a>
+  <a href="https://www.npmjs.com/package/reframe.js">
+    <img alt="npm version 0.3.6" src="https://badge.fury.io/js/reframe.js.svg" />
+  </a>
+  <a href="https://github.com/dollarshaveclub/reframe.js">
+    <img alt="Bower version 0.3.6" src="https://badge.fury.io/bo/reframe.js.svg" />
+  </a>
+  <a href="https://greenkeeper.io/">
+    <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
+  </a>
+  <a href="https://travis-ci.org/dollarshaveclub/reframe.js">
+    <img alt="Build Status" src="https://travis-ci.org/dollarshaveclub/reframe.js.svg?branch=master" />
+  </a>
+  <a href="https://twitter.com/home?status=Reframe+unresponsive+elements+responsively.+%F0%9F%92%AAhttps%3A%2F%2Fgithub.com%2Fdollarshaveclub%2Freframe.js+%40DSCEngineering+%40yowainwright+%23JavaScript">
+    <img alt="Share" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000" />
+  </a>
 </p>
 <hr>
-
+<h1 align="center">🖼 Reframe.js</h1>
 > Reframe.js is a javascript plugin that makes elements scale at a fixed ratio. 
 
 This is particularly awesome for making embedded stuff, like videos or playlists, scale appropriately within a content area. This can done by hand but it's difficult to maintain, especially with CMS's and multiple editors. Reframe.js solves this issue—perfectly!
