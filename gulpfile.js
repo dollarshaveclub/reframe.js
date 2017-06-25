@@ -51,7 +51,7 @@ const rollupPlugins = [
 ];
 
 // builds reframe
-gulp.task('build-reframe', () => {
+gulp.task('build:reframe', () => {
   rollup.rollup({
     entry: 'src/reframe.js',
     plugins: rollupPlugins,
@@ -67,7 +67,7 @@ gulp.task('build-reframe', () => {
 });
 
 // builds noframe
-gulp.task('build-noframe', () => {
+gulp.task('build:noframe', () => {
   rollup.rollup({
     entry: 'src/noframe.js',
     plugins: rollupPlugins,
@@ -83,7 +83,7 @@ gulp.task('build-noframe', () => {
 });
 
 // builds jquery reframe
-gulp.task('build-jquery-reframe', () => {
+gulp.task('build:jquery-reframe', () => {
   rollup.rollup({
     entry: 'src/jquery.reframe.js',
     plugins: rollupPlugins,
@@ -99,7 +99,7 @@ gulp.task('build-jquery-reframe', () => {
 });
 
 // builds jquery noframe
-gulp.task('build-jquery-noframe', () => {
+gulp.task('build:jquery-noframe', () => {
   rollup.rollup({
     entry: 'src/jquery.noframe.js',
     plugins: rollupPlugins,
@@ -115,7 +115,7 @@ gulp.task('build-jquery-noframe', () => {
 });
 
 // builds all reframe plugins
-gulp.task('build', ['build-reframe', 'build-noframe', 'build-jquery-reframe', 'build-jquery-noframe']);
+gulp.task('build', ['build:reframe', 'build:noframe', 'build:jquery-reframe', 'build:jquery-noframe']);
 
 // minify
 // minify all plugins 🔌
@@ -133,10 +133,10 @@ gulp.task('minify', function() {
 // tests ✔️
 // test each plugin
 // user qunit with phantom
-gulp.task('test-reframe', () => qunit('tests/reframe/index.html'));
-gulp.task('test-noframe', () => qunit('tests/noframe/index.html'));
-gulp.task('test-jquery-reframe', () => qunit('tests/jquery-reframe/index.html'));
-gulp.task('test-jquery-noframe', () => qunit('tests/jquery-noframe/index.html'));
-gulp.task('test', ['test-reframe', 'test-noframe', 'test-jquery-reframe', 'test-jquery-noframe']);
+gulp.task('test:reframe', () => qunit('tests/reframe/index.html'));
+gulp.task('test:noframe', () => qunit('tests/noframe/index.html'));
+gulp.task('test:jquery-reframe', () => qunit('tests/jquery-reframe/index.html'));
+gulp.task('test:jquery-noframe', () => qunit('tests/jquery-noframe/index.html'));
+gulp.task('test', ['test:reframe', 'test:noframe', 'test:jquery-reframe', 'test:jquery-noframe']);
 
 gulp.task('default', ['build', 'minify', 'test']);
