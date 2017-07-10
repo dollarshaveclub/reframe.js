@@ -3,5 +3,9 @@
   "rules": {
     "indent": 2,
     "semi": [2, "never"]
+  },
+  "globals": {
+    "document": true,
+    "window": true
   }
 }
