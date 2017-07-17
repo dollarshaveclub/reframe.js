@@ -120,3 +120,7 @@ $('iframe').noframe('parent');
 Reframe.js offers the **simplest solution** to making elements scale at an intrinsic ratio.
 
 Noframe.js **doesn't wrap** the selected element to make it scale at an intrinsic ratio. Noframe.js is the ideal solution when various events, like tracking events, could be affected when an element is _wrapped_. It _does_ require a `width` or `max-width` which can involve a bit more setup awareness.
+
+----
+
+Created and maintained by [Jeff Wainwright](https://github.com/yowainwright) with [Dollar Shave Club Engineering](https://github.com/dollarshaveclub).
