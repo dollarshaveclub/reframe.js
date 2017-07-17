@@ -40,6 +40,8 @@
         <div>
           <h2>Install</h2>
           <pre><code>npm install reframe.js --save-dev</code></pre></pre>
+           <h3>Or</h3>
+          <pre><code>yarn add reframe.js --save</code></pre></pre>
           <h3>Or</h3>
           <pre><code>bower install reframe.js --save-dev</code></pre>
         </div>
@@ -47,9 +49,9 @@
           <h2>Setup</h2>
           <ol>
             <li>
-              Add <code>dist/reframe.js</code>.
+              Add <code>dist/reframe.min.js</code>.
             </li>
-            <li>reframe the element you'd like to re-frame.</li>
+            <li><strong>reframe</strong> the element you'd like to <em>reframe</em>.</li>
           </ol>
         </div>
         <div>
@@ -90,19 +92,19 @@
           <pre><code>$('selector').reframe('classname');</code></pre>
         </div>
 				<div>
-          <h2>New! <span class="reframe">Noframe.js</span></h2>
+          <h2>Newer! <span class="reframe">Noframe.js</span></h2>
 					<p>Noframe.js makes the same ratio as Reframe.js using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">css calc</a>.
-					<p>Noframe.js's doesn't wrap the element you'd like to be responsive. It, instead, does a calculation based on its or a parent element's max-width. Here's a basic <a href="http://codepen.io/yowainwright/pen/19cd3f2fc3e00ce80e36285feae20b77">codepen example</a>.</p>
+					<p>Noframe.js's doesn't wrap the element you'd like to be responsive. It, instead, does a calculation based on a parent element's max-width. Here's a basic <a href="http://codepen.io/yowainwright/pen/19cd3f2fc3e00ce80e36285feae20b77">codepen example</a>.</p>
         </div>
 				<div>
 					<h2><span class="reframe">Noframe.js</span> Notes</h2>
-					<p>The reframed element requires a parent element with a max width to scale above the selected elements intial size otherwise the reframed element will only scale below its initial size. 👍</p>
+					<p>The reframed element requires a parent element with a max width to scale above the selected elements intial size otherwise the reframed element will only scale below its initial size.</p>
 				</div>
 				<div>
 					<h2>Setup</h2>
 					<ol>
 						<li>Add dist/noframe.js</li>
-						<li>noframe the element you'd like to re-frame.</li>
+						<li>noframe the element you'd like to make a responsive intrinsic ratio.</li>
 					</ol>
 				</div>
 				<div>
@@ -121,7 +123,7 @@
 					<p>Noframe.js doesn't wrap the selected element to make it scale at an intrinsic ratio. Noframe.js is the ideal solution when various events, like tracking events, could be affected when an element is wrapped. It does require a width or max-width which can involve a bit more setup awareness.</p>
 				</div>
         <p class="center">
-          Made by <a href="https://github.com/dollarshaveclub">Dollar Shave Club Engineering</a>.
+          Created and maintained by <a href="https://github.com/yowainwright">Jeff Wainwright</a> with <a href="https://github.com/dollarshaveclub">Dollar Shave Club Engineering</a>.
         </p>
         <p class="center">
           <a href="https://github.com/dollarshaveclub/reframe.js"><span class="reframe">Reframe.js</span></a>
@@ -135,20 +137,12 @@
 		reframe('iframe:not(#ghbtns)');
 	</script>
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-84214503-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'reframe-js/Lobby'
-  };
-</script>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-84214503-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 	</body>
 </html>
