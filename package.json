@@ -43,7 +43,7 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-runtime": "^6.20.0",
     "bower": "^1.7.9",
-    "debug": "^2.2.0",
+    "debug": "^3.0.0",
     "eslint": "^4.1.0",
     "eslint-config-airbnb": "^15.0.0",
     "eslint-plugin-import": "^2.6.0",
