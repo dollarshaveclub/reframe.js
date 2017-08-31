@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Reframe.js, reframe your content responsively" src="http://imgh.us/reframe.svg" width="400" />
+  <img alt="Reframe.js, reframe your content responsively" src="https://yowainwright.imgix.net/gh/reframe.svg" width="400" />
 </p>
 <p align="center">
   <a href="https://www.npmjs.com/package/reframe.js">
