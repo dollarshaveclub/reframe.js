@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "gulp-rollup": "^2.11.0",
-    "rollup-plugin-cleanup": "^1.0.0",
+    "rollup-plugin-cleanup": "^2.0.0",
     "rollup-plugin-replace": "^2.0.0"
   }
 }
