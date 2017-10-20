@@ -1,12 +1,13 @@
 {
   "name": "reframe.js",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "files": [
     "dist"
   ],
   "scripts": {
+    "test:es-check": "es-check check es5 dist/*.js",
     "test-reframe": "gulp build:reframe && gulp test:reframe",
     "test-noframe": "gulp build:noframe && gulp test:noframe",
     "test-jquery-reframe": "gulp build:jquery-reframe && gulp test:jquery-reframe",
@@ -44,6 +45,7 @@
     "babel-runtime": "^6.20.0",
     "bower": "^1.7.9",
     "debug": "^3.0.0",
+    "es-check": "^1.0.0",
     "eslint": "^4.1.0",
     "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.6.0",
