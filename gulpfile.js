@@ -57,10 +57,10 @@ gulp.task('build:reframe', () => {
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
-      dest: 'dist/reframe.js',
+      file: 'dist/reframe.js',
       format: 'umd',
-      moduleName: 'reframe',
-      sourceMap: false,
+      name: 'reframe',
+      sourcemap: false,
       treeshake: false,
     });
   });
@@ -73,10 +73,10 @@ gulp.task('build:noframe', () => {
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
-      dest: 'dist/noframe.js',
+      file: 'dist/noframe.js',
       format: 'umd',
-      moduleName: 'noframe',
-      sourceMap: false,
+      name: 'noframe',
+      sourcemap: false,
       treeshake: false,
     });
   });
@@ -89,10 +89,10 @@ gulp.task('build:jquery-reframe', () => {
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
-      dest: 'dist/jquery.reframe.js',
+      file: 'dist/jquery.reframe.js',
       format: 'umd',
-      moduleName: 'reframe',
-      sourceMap: false,
+      name: 'reframe',
+      sourcemap: false,
       treeshake: false,
     });
   });
@@ -105,10 +105,10 @@ gulp.task('build:jquery-noframe', () => {
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
-      dest: 'dist/jquery.noframe.js',
+      file: 'dist/jquery.noframe.js',
       format: 'umd',
-      moduleName: 'noframe',
-      sourceMap: false,
+      name: 'noframe',
+      sourcemap: false,
       treeshake: false,
     });
   });
