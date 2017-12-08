@@ -52,20 +52,19 @@
     "gulp": "^3.9.1",
     "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.15.0",
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.1.0",
     "node-qunit-phantomjs": "^1.5.0",
     "qunit": "^2.4.1",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.0",
+    "rollup-plugin-cleanup": "^2.0.0",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^2.0.0"
   },
-  "dependencies": {
-    "gulp-rollup": "^2.11.0",
-    "rollup-plugin-cleanup": "^2.0.0",
-    "rollup-plugin-replace": "^2.0.0"
-  }
+  "dependencies": {}
 }
