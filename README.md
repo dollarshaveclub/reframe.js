@@ -123,4 +123,4 @@ Noframe.js **doesn't wrap** the selected element to make it scale at an intrinsi
 
 ----
 
-Created and maintained by [Jeff Wainwright](https://github.com/yowainwright) with [Dollar Shave Club Engineering](https://github.com/dollarshaveclub).
+[Created](https://github.com/yowainwright/reframe.js) and maintained by [Jeff Wainwright](https://github.com/yowainwright) with [Dollar Shave Club Engineering](https://github.com/dollarshaveclub).
