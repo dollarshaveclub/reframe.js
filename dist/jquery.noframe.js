@@ -18,7 +18,7 @@ function noframe(target, container) {
       parent = document.querySelector(container);
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
-      styles.maxHeight = 'calc(' + maxW + ' * ' + h + '/' + w + ')';
+      styles.maxHeight = maxW + ' * ' + h + '/' + w;
     } else {
       styles.display = 'block';
       styles.marginLeft = 'auto';
@@ -26,13 +26,11 @@ function noframe(target, container) {
       var fullW = maxW + 'px';
       if (w > parent.offsetWidth) {
         fullW = parent.offsetWidth;
-        styles.maxH = 'calc(' + fullW + 'px * ' + h + '/' + w + ')';
-      } else {
-        styles.maxH = 'calc(' + maxW + ' * ' + h + '/' + w + ')';
-      }
+        styles.maxHeight = fullW + 'px * ' + h + '/' + w;
+      } else styles.maxHeight = maxW + ' * ' + h + '/' + w;
       styles.width = fullW + 'px';
     }
-    styles.height = 'calc(100vw * ' + h + '/' + w + ')';
+    styles.height = '100vw * ' + h + '/' + w;
     styles.maxWidth = '100vw';
   }
 }
