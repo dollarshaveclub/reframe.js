@@ -5,9 +5,6 @@
   <a href="https://www.npmjs.com/package/reframe.js">
     <img alt="npm version 0.3.6" src="https://badge.fury.io/js/reframe.js.svg" />
   </a>
-  <a href="https://github.com/dollarshaveclub/reframe.js">
-    <img alt="Bower version 0.3.6" src="https://badge.fury.io/bo/reframe.js.svg" />
-  </a>
   <a href="https://greenkeeper.io/">
     <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
   </a>
@@ -33,10 +30,6 @@ Alternatively, [noframe.js](#noframe) is provided. Noframe.js scales selected el
 NPM
 ```sh
 npm i reframe.js --save
-```
-Bower
-```sh
-bower i reframe.js --save
 ```
 Yarn
 ```sh
