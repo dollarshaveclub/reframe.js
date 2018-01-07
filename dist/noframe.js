@@ -18,20 +18,23 @@ function noframe(target, container) {
       parent = document.querySelector(container);
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
-      styles.maxHeight = maxW + ' * ' + h + '/' + w;
+      styles.maxHeight = 'calc(' + maxW + ' * ' + h + ' / ' + w + ')';
     } else {
+      var maxH = void 0;
       styles.display = 'block';
       styles.marginLeft = 'auto';
       styles.marginRight = 'auto';
-      var fullW = maxW + 'px';
+      var fullW = maxW;
       if (w > parent.offsetWidth) {
         fullW = parent.offsetWidth;
-        styles.maxHeight = fullW + 'px * ' + h + '/' + w;
-      } else styles.maxHeight = maxW + ' * ' + h + '/' + w;
-      styles.width = fullW + 'px';
+        maxH = fullW * h / w;
+      } else maxH = w * (h / w);
+      styles.maxHeight = maxH + 'px';
+      styles.width = fullW;
     }
-    styles.height = '100vw * ' + h + '/' + w;
-    styles.maxWidth = '100vw';
+    var cssHeight = 100 * h / w;
+    styles.height = cssHeight + 'vw';
+    styles.maxWidth = '100%';
   }
 }
 
