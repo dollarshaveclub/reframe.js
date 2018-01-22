@@ -50,7 +50,7 @@
     "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.6.0",
     "gulp": "^3.9.1",
-    "gulp-header": "^1.8.8",
+    "gulp-header": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.15.0",
     "gulp-uglify": "^3.0.0",
