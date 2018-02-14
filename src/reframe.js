@@ -18,8 +18,8 @@ export default function reframe(target, cName) {
     if (hasClass) return;
 
     // general targeted <element> sizes
-    const h = frame.offsetHeight;
-    const w = frame.offsetWidth;
+    const h = parseInt(frame.getAttribute('height'));
+    const w = parseInt(frame.getAttribute('width'));
     const padding = (h / w) * 100;
 
     // created element <wrapper> of general reframed item
