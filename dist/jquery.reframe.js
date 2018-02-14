@@ -12,8 +12,17 @@ function reframe(target, cName) {
         var frame = frames[i];
         var hasClass = frame.className.split(' ').indexOf(c) !== -1;
         if (hasClass) return;
-        var h = parseInt(frame.getAttribute('height'));
-        var w = parseInt(frame.getAttribute('width'));
+        var hAttribute = frame.getAttribute('height');
+        var wAttribute = frame.getAttribute('width');
+        var h = void 0;
+        var w = void 0;
+        if (hAttribute !== null && wAttribute !== null) {
+            h = parseInt(hAttribute);
+            w = parseInt(wAttribute);
+        } else {
+            h = frame.offsetHeight;
+            w = frame.offsetWidth;
+        }
         var padding = h / w * 100;
         var div = document.createElement('div');
         div.className = c;
