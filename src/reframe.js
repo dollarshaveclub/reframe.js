@@ -18,19 +18,12 @@ export default function reframe(target, cName) {
     if (hasClass) return;
 
     // get height width attributes
-    const hAttribute = frame.getAttribute('height');
-    const wAttribute = frame.getAttribute('width');
-    let h;
-    let w;
-
-    // Use attributes if available
-    if (hAttribute !== null && wAttribute !== null) {
-      h = parseInt(hAttribute);
-      w = parseInt(wAttribute);
-    } else {
-      h = frame.offsetHeight;
-      w = frame.offsetWidth;
-    }
+    const hAttr = frame.getAttribute('height');
+    const wAttr = frame.getAttribute('width');
+    // if has percentage width assume the iframe is responsive
+    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
+    const h = hAttr ? hAttr : frame.offsetHeight;
+    const w = wAttr ? wAttr : frame.offsetWidth;
 
     // general targeted <element> sizes
     const padding = (h / w) * 100;
