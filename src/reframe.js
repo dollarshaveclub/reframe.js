@@ -21,7 +21,7 @@ export default function reframe(target, cName) {
     const hAttr = frame.getAttribute('height');
     const wAttr = frame.getAttribute('width');
     // if has percentage height/width assume the iframe is responsive
-    if (wAttr.toString('%') || frame.style.width.toString('%')) return;
+    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
     const h = !hAttr ? frame.offsetHeight : hAttr;
     const w = !wAttr ? frame.offsetWidth : hAttr;
 

@@ -53,7 +53,7 @@ const rollupPlugins = [
 // builds reframe
 gulp.task('build:reframe', () => {
   rollup.rollup({
-    entry: 'src/reframe.js',
+    input: 'src/reframe.js',
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
@@ -69,7 +69,7 @@ gulp.task('build:reframe', () => {
 // builds noframe
 gulp.task('build:noframe', () => {
   rollup.rollup({
-    entry: 'src/noframe.js',
+    input: 'src/noframe.js',
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
@@ -85,7 +85,7 @@ gulp.task('build:noframe', () => {
 // builds jquery reframe
 gulp.task('build:jquery-reframe', () => {
   rollup.rollup({
-    entry: 'src/jquery.reframe.js',
+    input: 'src/jquery.reframe.js',
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({
@@ -101,7 +101,7 @@ gulp.task('build:jquery-reframe', () => {
 // builds jquery noframe
 gulp.task('build:jquery-noframe', () => {
   rollup.rollup({
-    entry: 'src/jquery.noframe.js',
+    input: 'src/jquery.noframe.js',
     plugins: rollupPlugins,
   }).then((bundle) => {
     bundle.write({

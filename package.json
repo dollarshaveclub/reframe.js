@@ -7,15 +7,16 @@
     "dist"
   ],
   "scripts": {
+    "build": "gulp build && gulp minify",
+    "build:release": "npm run build && npm test",
+    "minify": "gulp minify",
+    "postpublish": "git tag $npm_package_version && git push origin --tags",
     "test:es-check": "es-check es5 dist/*.js",
     "test-reframe": "gulp build:reframe && gulp test:reframe",
     "test-noframe": "gulp build:noframe && gulp test:noframe",
     "test-jquery-reframe": "gulp build:jquery-reframe && gulp test:jquery-reframe",
     "test-jquery-noframe": "gulp build:jquery-noframe && gulp test:jquery-noframe",
-    "test": "gulp test",
-    "minify": "gulp minify",
-    "build": "gulp",
-    "postpublish": "git tag $npm_package_version && git push origin --tags"
+    "test": "gulp test && npm run test:es-check"
   },
   "repository": {
     "type": "git",
@@ -57,14 +58,14 @@
     "jquery": "^3.1.0",
     "node-qunit-phantomjs": "^2.0.0",
     "qunit": "^2.4.1",
-    "rollup": "^0.56.0",
+    "rollup": "^0.53.0",
     "rollup-plugin-babel": "^3.0.0",
     "rollup-plugin-cleanup": "^2.0.0",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-uglify": "^3.0.0"
+    "rollup-plugin-uglify": "^2.0.0"
   },
   "dependencies": {}
 }

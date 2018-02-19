@@ -14,7 +14,7 @@ function reframe(target, cName) {
     if (hasClass) return;
     var hAttr = frame.getAttribute('height');
     var wAttr = frame.getAttribute('width');
-    if (wAttr.toString('%') || frame.style.width.toString('%')) return;
+    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
     var h = !hAttr ? frame.offsetHeight : hAttr;
     var w = !wAttr ? frame.offsetWidth : hAttr;
     var padding = h / w * 100;
