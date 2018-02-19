@@ -15,8 +15,8 @@ function reframe(target, cName) {
     var hAttr = frame.getAttribute('height');
     var wAttr = frame.getAttribute('width');
     if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
-    var h = !hAttr ? frame.offsetHeight : hAttr;
-    var w = !wAttr ? frame.offsetWidth : hAttr;
+    var h = hAttr ? hAttr : frame.offsetHeight;
+    var w = wAttr ? wAttr : frame.offsetWidth;
     var padding = h / w * 100;
     var div = document.createElement('div');
     div.className = c;
