@@ -16,13 +16,13 @@ export default function noframe(target, container) {
     const w = frame.offsetWidth;
     const styles = frame.style;
     let maxW = `${w}px`;
-    let parent;
-    // If a targeted <parent> element is defined
-    // and it should not be `null`
+    let parent = null;
+    // If a targeted container <element> is present in DOM
     if (typeof container !== 'undefined') {
-      parent = document.querySelector(container) || null;
+      // `parent` will be either <element> or `null`
+      parent = document.querySelector(container);
     }
-    // If container <element> is found
+    // If container <element> found
     if (parent) {
       // gets/sets the height/width ratio
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
