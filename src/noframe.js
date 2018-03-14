@@ -19,7 +19,7 @@ export default function noframe(target, container) {
     let parent;
     // If a targeted <parent> element is defined
     // and it should not be `null`
-    parent = document.querySelector(container) || null;
+    parent = (typeof container !== 'undefined') ? document.querySelector(container) : null;
     if (parent) {
       // gets/sets the height/width ratio
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
