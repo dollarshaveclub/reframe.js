@@ -12,18 +12,14 @@ export default function noframe(target, container) {
   if (!('length' in frames)) frames = [frames];
   for (let i = 0; i < frames.length; i += 1) {
     const frame = frames[i];
+    const isContainerElement = typeof container !== 'undefined' && document.querySelector(container);
+    const parent = isContainerElement ? document.querySelector(container) : frame.parentElement;
     const h = frame.offsetHeight;
     const w = frame.offsetWidth;
     const styles = frame.style;
     let maxW = `${w}px`;
-    let parent = null;
-    // If a targeted container <element> is present in DOM
-    if (typeof container !== 'undefined') {
-      // `parent` will be either <element> or `null`
-      parent = document.querySelector(container);
-    }
-    // If container <element> found
-    if (parent) {
+    // => If a targeted <container> element is defined
+    if (isContainerElement) {
       // gets/sets the height/width ratio
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
@@ -32,7 +28,6 @@ export default function noframe(target, container) {
     } else {
       // gets/sets the height/width ratio
       // => if a targeted <element> closest parent <element> is NOT defined
-      parent = frame.parentElement;
       let maxH;
       styles.display = 'block';
       styles.marginLeft = 'auto';
