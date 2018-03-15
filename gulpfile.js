@@ -66,6 +66,22 @@ gulp.task('build:reframe', () => {
   });
 });
 
+// builds reframe
+gulp.task('build:reframe:es', () => {
+  rollup.rollup({
+    input: 'src/reframe.js',
+    plugins: rollupPlugins,
+  }).then((bundle) => {
+    bundle.write({
+      file: 'dist/reframe.es.js',
+      format: 'es',
+      name: 'reframe',
+      sourcemap: false,
+      treeshake: false,
+    });
+  });
+});
+
 // builds noframe
 gulp.task('build:noframe', () => {
   rollup.rollup({
@@ -74,6 +90,22 @@ gulp.task('build:noframe', () => {
   }).then((bundle) => {
     bundle.write({
       file: 'dist/noframe.js',
+      format: 'umd',
+      name: 'noframe',
+      sourcemap: false,
+      treeshake: false,
+    });
+  });
+});
+
+// builds noframe
+gulp.task('build:noframe:es', () => {
+  rollup.rollup({
+    input: 'src/noframe.js',
+    plugins: rollupPlugins,
+  }).then((bundle) => {
+    bundle.write({
+      file: 'dist/noframe.es.js',
       format: 'umd',
       name: 'noframe',
       sourcemap: false,
@@ -115,7 +147,7 @@ gulp.task('build:jquery-noframe', () => {
 });
 
 // builds all reframe plugins
-gulp.task('build', ['build:reframe', 'build:noframe', 'build:jquery-reframe', 'build:jquery-noframe']);
+gulp.task('build', ['build:reframe', 'build:reframe:es', 'build:noframe', 'build:noframe:es', 'build:jquery-reframe', 'build:jquery-noframe']);
 
 // minify
 // minify all plugins 🔌
