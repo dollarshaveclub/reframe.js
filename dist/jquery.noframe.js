@@ -9,13 +9,13 @@ function noframe(target, container) {
   if (!('length' in frames)) frames = [frames];
   for (var i = 0; i < frames.length; i += 1) {
     var frame = frames[i];
-    var parent = frame.parentElement;
+    var isContainerElement = typeof container !== 'undefined' && document.querySelector(container);
+    var parent = isContainerElement ? document.querySelector(container) : frame.parentElement;
     var h = frame.offsetHeight;
     var w = frame.offsetWidth;
     var styles = frame.style;
     var maxW = w + 'px';
-    if (typeof container !== 'undefined') {
-      parent = document.querySelector(container);
+    if (isContainerElement) {
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
       styles.maxHeight = 'calc(' + maxW + ' * ' + h + ' / ' + w + ')';
