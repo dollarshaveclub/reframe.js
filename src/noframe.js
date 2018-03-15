@@ -12,15 +12,15 @@ export default function noframe(target, container) {
   if (!('length' in frames)) frames = [frames];
   for (let i = 0; i < frames.length; i += 1) {
     const frame = frames[i];
-    let parent = frame.parentElement;
+    const isContainerElement = typeof container !== 'undefined' && document.querySelector(container);
+    const parent = isContainerElement ? document.querySelector(container) : frame.parentElement;
     const h = frame.offsetHeight;
     const w = frame.offsetWidth;
     const styles = frame.style;
     let maxW = `${w}px`;
-    if (typeof container !== 'undefined') {
+    // => If a targeted <container> element is defined
+    if (isContainerElement) {
       // gets/sets the height/width ratio
-      // => if a targeted <parent> element is defined
-      parent = document.querySelector(container);
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
       // calc is needed here b/c the maxW measurement type is unknown
