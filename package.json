@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "module": "dist/reframe.es.js",
@@ -13,7 +13,7 @@
     "build:release": "npm run build && npm test",
     "minify": "gulp minify",
     "postpublish": "git tag $npm_package_version && git push origin --tags",
-    "test:es-check": "es-check es5 dist/*.js",
+    "test:es-check": "es-check es5 dist/jquery.noframe.js dist/jquery.noframe.min.js dist/jquery.reframe.js dist/jquery.reframe.min.js dist/noframe.js dist/noframe.min.js dist/reframe.js dist/reframe.min.js",
     "test-reframe": "gulp build:reframe && gulp test:reframe",
     "test-noframe": "gulp build:noframe && gulp test:noframe",
     "test-jquery-reframe": "gulp build:jquery-reframe && gulp test:jquery-reframe",

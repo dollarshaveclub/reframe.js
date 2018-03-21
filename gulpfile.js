@@ -106,7 +106,7 @@ gulp.task('build:noframe:es', () => {
   }).then((bundle) => {
     bundle.write({
       file: 'dist/noframe.es.js',
-      format: 'umd',
+      format: 'es',
       name: 'noframe',
       sourcemap: false,
       treeshake: false,

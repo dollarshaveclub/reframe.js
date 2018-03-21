@@ -1,9 +1,3 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.noframe = factory());
-}(this, (function () { 'use strict';
-
 function noframe(target, container) {
   var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
   if (!('length' in frames)) frames = [frames];
@@ -38,6 +32,4 @@ function noframe(target, container) {
   }
 }
 
-return noframe;
-
-})));
+export default noframe;
