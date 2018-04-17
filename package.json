@@ -11,6 +11,8 @@
   "scripts": {
     "build": "gulp build && gulp minify",
     "build:release": "npm run build && npm test",
+    "eslint": "eslint .",
+    "eslint": "eslint . --fix",
     "minify": "gulp minify",
     "postpublish": "git tag $npm_package_version && git push origin --tags",
     "test:es-check": "es-check es5 dist/jquery.noframe.js dist/jquery.noframe.min.js dist/jquery.reframe.js dist/jquery.reframe.min.js dist/noframe.js dist/noframe.min.js dist/reframe.js dist/reframe.min.js",
