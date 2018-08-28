@@ -1,11 +1,19 @@
 {
-  "extends": [ "airbnb/base"],
-  "rules": {
-    "indent": 2,
-    "semi": [2, "never"]
+  "extends": "dollarshaveclub",
+  "env": {
+    "browser": true,
+    "node": true
   },
   "globals": {
     "document": true,
+    "expect": true,
     "window": true
+  },
+  "rules": {
+    "indent": 1,
+    "semi": [
+      2,
+      "never"
+    ]
   }
 }
