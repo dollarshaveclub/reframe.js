@@ -9,15 +9,15 @@ function reframe(target, cName) {
     var hAttr = frame.getAttribute('height');
     var wAttr = frame.getAttribute('width');
     if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
-    var h = hAttr ? hAttr : frame.offsetHeight;
-    var w = wAttr ? wAttr : frame.offsetWidth;
+    var h = hAttr || frame.offsetHeight;
+    var w = wAttr || frame.offsetWidth;
     var padding = h / w * 100;
     var div = document.createElement('div');
     div.className = c;
     var divStyles = div.style;
     divStyles.position = 'relative';
     divStyles.width = '100%';
-    divStyles.paddingTop = padding + '%';
+    divStyles.paddingTop = padding + "%";
     var frameStyle = frame.style;
     frameStyle.position = 'absolute';
     frameStyle.width = '100%';

@@ -7,7 +7,7 @@
   -------------
   defines the height/width ratio of the targeted <element>
 */
-export default function reframe(target, cName) {
+export default function reframe (target, cName) {
   let frames = (typeof target === 'string') ? document.querySelectorAll(target) : target
   const c = cName || 'js-reframe'
   if (!('length' in frames)) frames = [frames]

@@ -8,11 +8,11 @@ function noframe(target, container) {
     var h = frame.offsetHeight;
     var w = frame.offsetWidth;
     var styles = frame.style;
-    var maxW = w + 'px';
+    var maxW = w + "px";
     if (isContainerElement) {
       maxW = window.getComputedStyle(parent, null).getPropertyValue('max-width');
       styles.width = '100%';
-      styles.maxHeight = 'calc(' + maxW + ' * ' + h + ' / ' + w + ')';
+      styles.maxHeight = "calc(" + maxW + " * " + h + " / " + w + ")";
     } else {
       var maxH = void 0;
       styles.display = 'block';
@@ -23,11 +23,11 @@ function noframe(target, container) {
         fullW = parent.offsetWidth;
         maxH = fullW * h / w;
       } else maxH = w * (h / w);
-      styles.maxHeight = maxH + 'px';
+      styles.maxHeight = maxH + "px";
       styles.width = fullW;
     }
     var cssHeight = 100 * h / w;
-    styles.height = cssHeight + 'vw';
+    styles.height = cssHeight + "vw";
     styles.maxWidth = '100%';
   }
 }
