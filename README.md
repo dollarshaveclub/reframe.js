@@ -5,6 +5,9 @@
   <a href="https://www.npmjs.com/package/reframe.js">
     <img alt="npm version 0.3.6" src="https://badge.fury.io/js/reframe.js.svg" />
   </a>
+  <a href="https://unpkg.com/stickybits@latest/dist/reframe.min.js">
+    <img alt="unpkg" src="https://img.shields.io/badge/unpkg-link-blue.svg">
+  </a>
   <a href="https://greenkeeper.io/">
     <image alt="Greenkeeper" src="https://badges.greenkeeper.io/dollarshaveclub/reframe.js.svg" />
   </a>
@@ -33,7 +36,7 @@ npm i reframe.js --save
 ```
 Yarn
 ```sh
-yarn add reframe.js 
+yarn add reframe.js
 ```
 
 ### Setup
@@ -70,7 +73,7 @@ reframe('iframe', 'my-classname');
 ```
 ### jQuery
 
-**Reframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.reframe.js` for jQuery or Zepto. 
+**Reframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.reframe.js` for jQuery or Zepto.
 
 ```javascript
 $('iframe').reframe();
@@ -102,7 +105,7 @@ noframe('iframe', 'parent');
 
 ### jQuery
 
-**Noframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.noframe.js` for jQuery or Zepto. 
+**Noframe.js** works with jQuery or Zepto. As of version 2.0.0, use `jquery.noframe.js` for jQuery or Zepto.
 
 ```javascript
 $('iframe').noframe();
