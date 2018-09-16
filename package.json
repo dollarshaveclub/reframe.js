@@ -47,6 +47,7 @@
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "bower": "^1.7.9",
+    "conventional-changelog-cli": "^2.0.5",
     "debug": "^3.0.0",
     "es-check": "^2.0.0",
     "eslint": "^5.0.0",
