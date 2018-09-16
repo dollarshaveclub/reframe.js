@@ -4007,13 +4007,14 @@ rollup-plugin-replace@^2.0.0:
     minimatch "^3.0.2"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-uglify@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-5.0.2.tgz#3d7985faa9760a933eb451fcfb7f54bf76c0651d"
+rollup-plugin-uglify@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-6.0.0.tgz#15aa8919e5cdc63b7cfc9319c781788b40084ce4"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     jest-worker "^23.2.0"
-    uglify-js "^3.4.8"
+    serialize-javascript "^1.5.0"
+    uglify-js "^3.4.9"
 
 rollup-pluginutils@^2.0.1:
   version "2.0.1"
@@ -4093,6 +4094,10 @@ semver@^5.4.1, semver@^5.5.0, semver@^5.5.1:
 sequencify@~0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/sequencify/-/sequencify-0.0.7.tgz#90cff19d02e07027fd767f5ead3e7b95d1e7380c"
+
+serialize-javascript@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.5.0.tgz#1aa336162c88a890ddad5384baebc93a655161fe"
 
 set-blocking@~2.0.0:
   version "2.0.0"
@@ -4542,7 +4547,7 @@ uglify-js@^3.0.5:
     commander "~2.9.0"
     source-map "~0.5.1"
 
-uglify-js@^3.4.8:
+uglify-js@^3.4.9:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
   dependencies:
