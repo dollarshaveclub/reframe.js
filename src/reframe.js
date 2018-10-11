@@ -15,13 +15,13 @@ export default function reframe (target, cName) {
     const frame = frames[i]
     // makes sure reframe is not run more than 1x ✔️
     const hasClass = frame.className.split(' ').indexOf(c) !== -1
-    if (hasClass) return
+    if (hasClass) continue
 
     // get height width attributes
     const hAttr = frame.getAttribute('height')
     const wAttr = frame.getAttribute('width')
     // if has percentage width assume the iframe is responsive
-    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return
+    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) continue
     const h = hAttr || frame.offsetHeight
     const w = wAttr || frame.offsetWidth
 

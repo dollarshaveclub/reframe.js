@@ -11,10 +11,10 @@
     for (var i = 0; i < frames.length; i += 1) {
       var frame = frames[i];
       var hasClass = frame.className.split(' ').indexOf(c) !== -1;
-      if (hasClass) return;
+      if (hasClass) continue;
       var hAttr = frame.getAttribute('height');
       var wAttr = frame.getAttribute('width');
-      if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) return;
+      if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) continue;
       var h = hAttr || frame.offsetHeight;
       var w = wAttr || frame.offsetWidth;
       var padding = h / w * 100;
