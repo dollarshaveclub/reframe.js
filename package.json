@@ -60,7 +60,7 @@
     "es-check": "^5.0.0",
     "eslint": "^5.0.0",
     "eslint-config-dollarshaveclub": "^3.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-header": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.15.0",
