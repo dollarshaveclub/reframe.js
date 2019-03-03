@@ -1,4 +1,4 @@
-/* global document, window */
+/* global window */
 import reframe from './reframe'
 
 if (typeof window !== 'undefined') {
