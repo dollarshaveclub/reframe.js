@@ -52,8 +52,8 @@
   },
   "homepage": "https://github.com/dollarshaveclub/reframe.js#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "bower": "^1.7.9",
     "conventional-changelog-cli": "^2.0.11",
     "debug": "^4.0.0",

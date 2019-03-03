@@ -1,8 +1,8 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.reframe = factory());
-}(this, (function () { 'use strict';
+  (global = global || self, global.reframe = factory());
+}(this, function () { 'use strict';
 
   function reframe(target, cName) {
     var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
@@ -38,4 +38,4 @@
 
   return reframe;
 
-})));
+}));
