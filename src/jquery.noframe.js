@@ -1,4 +1,3 @@
-/* global window */
 import noframe from './noframe'
 
 if (typeof window !== 'undefined') {
