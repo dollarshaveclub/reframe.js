@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = global || self, global.noframe = factory());
-}(this, function () { 'use strict';
+}(this, (function () { 'use strict';
 
   function noframe(target, container) {
     var frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
@@ -40,4 +40,4 @@
 
   return noframe;
 
-}));
+})));
