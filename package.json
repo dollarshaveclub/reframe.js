@@ -62,7 +62,7 @@
     "eslint-config-dollarshaveclub": "^3.1.0",
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^2.0.0",
     "gulp-rollup": "^2.15.0",
     "gulp-uglify": "^3.0.0",
     "husky": "^3.0.0",
