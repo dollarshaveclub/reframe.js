@@ -1,6 +1,6 @@
 {
   "name": "reframe.js",
-  "version": "2.2.6",
+  "version": "2.2.7",
   "description": "Reframe.js: responsive iframes for embedded content",
   "main": "dist/reframe.js",
   "module": "dist/reframe.es.js",
@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "gulp build && gulp minify",
+    "build": "npx gulp build && npx gulp minify",
     "build:release": "npm run build && npm test",
     "chore:delete-changelog-branch": "if git show-ref --quiet refs/heads/chore-changelog; then git branch -D chore-changelog; fi",
     "chore:branch": "git checkout -b chore-changelog",
@@ -20,14 +20,15 @@
     "chore": "npm run chore:delete-changelog-branch && npm run chore:branch && npm run chore:changelog && npm run chore:pr && npm run chore:setup-next-work",
     "eslint": "eslint . --fix",
     "eslint:ci": "eslint .",
-    "minify": "gulp minify",
+    "minify": "npx gulp minify",
     "postpublish": "git tag $npm_package_version && git push origin --tags && npm run chore",
     "prepush": "npm run build && npm test",
+    "start": "npm install",
     "test:es-check": "es-check es5 'dist/jquery.noframe.js' 'dist/jquery.noframe.min.js' 'dist/jquery.reframe.js' 'dist/jquery.reframe.min.js' 'dist/noframe.js' 'dist/noframe.min.js' 'dist/reframe.js' 'dist/reframe.min.js'",
-    "test-reframe": "gulp build:reframe && gulp test:reframe",
-    "test-noframe": "gulp build:noframe && gulp test:noframe",
-    "test-jquery-reframe": "gulp build:jquery-reframe && gulp test:jquery-reframe",
-    "test-jquery-noframe": "gulp build:jquery-noframe && gulp test:jquery-noframe",
+    "test-reframe": "npx gulp build:reframe && npx gulp test:reframe",
+    "test-noframe": "npx gulp build:noframe && npx gulp test:noframe",
+    "test-jquery-reframe": "npx gulp build:jquery-reframe && npx gulp test:jquery-reframe",
+    "test-jquery-noframe": "npx gulp build:jquery-noframe && npx gulp test:jquery-noframe",
     "test": "gulp test && npm run test:es-check"
   },
   "repository": {
