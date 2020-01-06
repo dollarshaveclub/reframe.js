@@ -1,3 +1,8 @@
+## [2.2.7](https://github.com/dollarshaveclub/reframe.js/compare/2.2.6...2.2.7) (2020-01-06)
+
+
+
+
 ## [2.2.6](https://github.com/dollarshaveclub/reframe.js/compare/2.2.5...2.2.6) (2019-11-08)
 
 
