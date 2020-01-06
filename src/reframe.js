@@ -15,15 +15,12 @@ export default function reframe (target, cName) {
     const frame = frames[i]
     // makes sure reframe is not run more than 1x ✔️
     const hasClass = frame.className.split(' ').indexOf(c) !== -1
-    if (hasClass) continue
+
+    if (hasClass || frame.style.width.indexOf('%') > -1) continue
 
     // get height width attributes
-    const hAttr = frame.getAttribute('height')
-    const wAttr = frame.getAttribute('width')
-    // if has percentage width assume the iframe is responsive
-    if (wAttr.indexOf('%') > -1 || frame.style.width.indexOf('%') > -1) continue
-    const h = hAttr || frame.offsetHeight
-    const w = wAttr || frame.offsetWidth
+    const h = frame.getAttribute('height') || frame.offsetHeight
+    const w = frame.getAttribute('width') || frame.offsetWidth
 
     // general targeted <element> sizes
     const padding = (h / w) * 100
