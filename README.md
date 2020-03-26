@@ -1,3 +1,13 @@
+<p align="center">⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️</p>
+<p align="center">
+  <strong>
+    This software is maintained under a new repository located at <a href="https://github.com/yowainwright/reframe.js">yowainwright/reframe.js</a>
+  </strong>
+</p>
+<p align="center">⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️</p>
+
+***
+
 <p align="center">
   <img alt="Reframe.js, reframe your content responsively" src="https://yowainwright.imgix.net/gh/reframe.svg" width="400" />
 </p>
